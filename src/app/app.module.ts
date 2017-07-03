@@ -1,27 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { VegaComponent } from './vega/vega.component';
+import { VizzesComponent } from './vizzes.component';
+import { VizComponent } from './viz.component';
+import { VizService } from './viz.service';
+import { VizContainerComponent } from './viz-container.component';
 
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    VegaComponent,
-  ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: 'vega',
-        component: VegaComponent
-      }
-    ])
-
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    VizzesComponent,
+    VizComponent,
+    VizContainerComponent,
+  ],
+  providers: [VizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

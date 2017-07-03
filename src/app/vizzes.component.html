@@ -1,0 +1,12 @@
+<h2>Vizzes</h2>
+<ul class="vizzes">
+    <li *ngFor="let viz of vizzes" [class.selected]="viz === selectedViz" (click)="onSelect(viz)">
+        <span class="badge">{{viz.id}}</span> {{viz.name}}
+    </li>
+</ul>
+<div *ngIf="selectedViz">
+  <h2>
+    {{selectedViz.name }}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
