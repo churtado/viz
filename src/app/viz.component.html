@@ -1,13 +1,11 @@
 <div *ngIf="viz">
     <h2>{{viz.name}} details</h2>
     <div>
-        <label>id: </label>{{viz.id}}
+        <label>{{viz.name}}</label>
     </div>
     <div>
-        <label>name: </label>
-        <input [(ngModel)]="viz.name" placeholder="name" />
-        
+        <label>{{viz.description}}</label>
     </div>
-    <button (click)="goBack()">Back</button>
 </div>
 <div id="view" class="view"></div>
+<button (click)="goBack()">Back</button>
