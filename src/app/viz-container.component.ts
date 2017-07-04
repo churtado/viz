@@ -4,7 +4,7 @@ import { Viz } from './viz';
 import { VizService } from './viz.service';
 
 @Component({
-    selector: 'viz-container',
+    selector: 'app-container',
     templateUrl: './viz-container.component.html',
 })
 export class VizContainerComponent implements OnInit {

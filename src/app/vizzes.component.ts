@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Viz } from './viz';
 import { VizService } from './viz.service';
 @Component({
-  selector: 'vizzes',
+  selector: 'app-vizzes',
   templateUrl: './vizzes.component.html',
   styleUrls: ['./vizzes.component.css'],
 })
