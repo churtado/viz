@@ -22,11 +22,15 @@ export class VizComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        // get the viz
+        // get the viz id from the url parameter passed in
         this.route.paramMap
+            // get the viz object observable
             .switchMap((params: ParamMap) => this.vizService.getViz(+params.get('id')))
+            // subscribe to get the viz value
             .subscribe((viz: Viz) => {
+                // attach it to the component
                 this.viz = viz;
+                // render vega component
                 this.vizService.getVegaSpec(this.viz.specUrl).subscribe((json) => {
                     // render the viz
                     const view = new vega.View(vega.parse(json))
