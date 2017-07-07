@@ -21,7 +21,7 @@ export class VizService {
     }
 
     getVegaSpec(url: string) {
-        return this.http.get(`./../assets/spec/vg/${url}.vg.json`)
+        return this.http.get(`./../assets/spec/vg/${url}/spec.vg.json`)
             .map(res => res.json());
     }
 
