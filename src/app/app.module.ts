@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { VizzesComponent } from './vizzes.component';
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    HttpModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
     VizComponent,
     VizContainerComponent,
   ],
-  providers: [VizService],
+  providers: [
+    VizService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
