@@ -7,7 +7,7 @@
   "data": [
     {
       "name": "table",
-      "url": "http://localhost:4200/assets/spec/vg/simple_bar/data.json"
+      "url": "http://localhost:4200/assets/spec/vega/simple_bar/data.json"
     }
   ],
 

@@ -17,16 +17,16 @@ export class VizService {
 
     getViz(id: number): Promise<Viz> {
         return this.getVizzes()
-            .then(heroes => heroes.find(hero => hero.id === id));
+            .then(vizzes => vizzes.find(viz => viz.id === id));
     }
 
-    getVegaSpec(url: string) {
-        return this.http.get(`./../assets/spec/vg/${url}/spec.vg.json`)
+    getSpec(viz: Viz) {
+        return this.http.get(`./../assets/spec/${viz.type}/${viz.specUrl}/spec.vg.json`)
             .map(res => res.json());
     }
 
-    getVegaTooltipSpec(url: string) {
-        return this.http.get(`./../assets/spec/vg/${url}/tooltip.json`)
+    getVegaTooltipSpec(viz: Viz) {
+        return this.http.get(`./../assets/spec/vega/${viz.specUrl}/tooltip.json`)
             .map(res => res.json());
     }
 

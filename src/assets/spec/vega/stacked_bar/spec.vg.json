@@ -7,7 +7,7 @@
   "data": [
     {
       "name": "table",
-      "url": "http://localhost:4200/assets/spec/vg/stacked_bar/data.json",
+      "url": "http://localhost:4200/assets/spec/vega/stacked_bar/data.json",
       "transform": [
         {
           "type": "stack",

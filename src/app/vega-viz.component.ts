@@ -10,10 +10,10 @@ const vega = require('vega');
 const vegaTooltip = require('vega-tooltip');
 
 @Component({
-    selector: 'app-viz',
-    templateUrl: './viz.component.html',
+    selector: 'app-vega-viz',
+    templateUrl: './vega-viz.component.html',
 })
-export class VizComponent implements OnInit {
+export class VegaVizComponent implements OnInit {
     @Input() viz: Viz;
 
     constructor(
@@ -32,7 +32,7 @@ export class VizComponent implements OnInit {
                 // attach it to the component
                 this.viz = viz;
                 // render vega component
-                this.vizService.getVegaSpec(this.viz.specUrl).subscribe((json) => {
+                this.vizService.getSpec(this.viz).subscribe((json) => {
 
                     // create runtime dataflow of the viz
                     const runtime = vega.parse(json);
@@ -44,7 +44,7 @@ export class VizComponent implements OnInit {
                         .run();              // run the dataflow and render the view
 
                     this.vizService
-                        .getVegaTooltipSpec(this.viz.specUrl)
+                        .getVegaTooltipSpec(viz)
                         .subscribe((tooltipOptions) => {
                             vegaTooltip.vega(view, tooltipOptions);
                         });

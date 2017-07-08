@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { VizzesComponent } from './vizzes.component';
-import { VizComponent } from './viz.component';
+import { VegaVizComponent } from './vega-viz.component';
 import { VizService } from './viz.service';
 import { VizContainerComponent } from './viz-container.component';
 
@@ -20,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     VizzesComponent,
-    VizComponent,
+    VegaVizComponent,
     VizContainerComponent,
   ],
   providers: [

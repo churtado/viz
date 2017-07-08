@@ -17,7 +17,7 @@
   "data": [
     {
       "name": "cars",
-      "url": "http://localhost:4200/assets/spec/vg/parallel_axis/data.json",
+      "url": "http://localhost:4200/assets/spec/vega/parallel_axis/data.json",
       "format": {
         "type": "json",
         "parse": {"Year": "date:%Y-%m-%d"}

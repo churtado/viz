@@ -26,7 +26,7 @@
   "data": [
     {
       "name": "tuples",
-      "url": "http://localhost:4200/assets/spec/vg/nested_bar/data.json",
+      "url": "http://localhost:4200/assets/spec/vega/nested_bar/data.json",
       "transform": [
         {
           "type": "aggregate",
