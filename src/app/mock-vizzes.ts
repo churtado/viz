@@ -9,8 +9,8 @@ export const VIZZES: Viz[] = [
     },
     {
         id: 2,
-        name: 'Parallel Axis',
-        description: 'A parallel axis chart in vega',
-        specUrl: 'parallel_axis'
+        name: 'Stacked Bar',
+        description: 'A stacked bar chart in vega',
+        specUrl: 'stacked_bar'
     }
 ];
