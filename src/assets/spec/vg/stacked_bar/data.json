@@ -1,102 +1,102 @@
 [
     {
-        "x": 0,
+        "x": "A",
         "y": 28,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 0,
+        "x": "A",
         "y": 55,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 1,
+        "x": "B",
         "y": 43,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 1,
+        "x": "B",
         "y": 91,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 2,
+        "x": "C",
         "y": 81,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 2,
+        "x": "C",
         "y": 53,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 3,
+        "x": "D",
         "y": 19,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 3,
+        "x": "D",
         "y": 87,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 4,
+        "x": "E",
         "y": 52,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 4,
+        "x": "E",
         "y": 48,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 5,
+        "x": "F",
         "y": 24,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 5,
+        "x": "F",
         "y": 49,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 6,
+        "x": "G",
         "y": 87,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 6,
+        "x": "G",
         "y": 66,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 7,
+        "x": "H",
         "y": 17,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 7,
+        "x": "H",
         "y": 27,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 8,
+        "x": "I",
         "y": 68,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 8,
+        "x": "I",
         "y": 16,
-        "c": 1
+        "c": "category B"
     },
     {
-        "x": 9,
+        "x": "J",
         "y": 49,
-        "c": 0
+        "c": "category A"
     },
     {
-        "x": 9,
+        "x": "J",
         "y": 15,
-        "c": 1
+        "c": "category B"
     }
 ]

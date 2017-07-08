@@ -1,0 +1,17 @@
+{
+    "showAllFields": false,
+    "delay": 125,
+    "colorTheme": "light",
+    "fields": [
+        {
+            "field": "c",
+            "title": "Category",
+            "formatType": "string"
+        },
+        {
+            "field": "y",
+            "title": "Amount",
+            "formatType": "number"
+        }
+    ]
+}

@@ -25,4 +25,9 @@ export class VizService {
             .map(res => res.json());
     }
 
+    getVegaTooltipSpec(url: string) {
+        return this.http.get(`./../assets/spec/vg/${url}/tooltip.json`)
+            .map(res => res.json());
+    }
+
 }

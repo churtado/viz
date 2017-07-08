@@ -43,11 +43,12 @@ export class VizComponent implements OnInit {
                         .hover()             // enable hover encode set processing
                         .run();              // run the dataflow and render the view
 
-                    // options for vega tooltip
-                    const options = {
-                        mode: 'vega'
-                    }
-                    vegaTooltip.vega(view);
+                    this.vizService
+                        .getVegaTooltipSpec(this.viz.specUrl)
+                        .subscribe((tooltipOptions) => {
+                            vegaTooltip.vega(view, tooltipOptions);
+                        });
+
                 })
             });
     }
