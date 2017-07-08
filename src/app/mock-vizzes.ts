@@ -12,5 +12,29 @@ export const VIZZES: Viz[] = [
         name: 'Stacked Bar',
         description: 'A stacked bar chart in vega',
         specUrl: 'stacked_bar'
+    },
+    {
+        id: 3,
+        name: 'Grouped Bar',
+        description: 'A grouped bar chart in vega',
+        specUrl: 'grouped_bar'
+    },
+    {
+        id: 4,
+        name: 'Nested Bar',
+        description: 'A nested bar chart in vega',
+        specUrl: 'nested_bar'
+    },
+    {
+        id: 5,
+        name: 'Population Pyramid',
+        description: 'A population pyramid chart in vega',
+        specUrl: 'population_pyramid'
+    },
+    {
+        id: 6,
+        name: 'Parallel Axis',
+        description: 'A parallel axis chart in vega',
+        specUrl: 'parallel_axis'
     }
 ];
