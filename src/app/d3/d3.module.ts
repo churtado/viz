@@ -10,6 +10,7 @@ import { D3BarChartComponent } from './index';
     exports: [
         D3BarChartComponent,
     ],
-    providers: []
+    providers: [],
+    entryComponents: [D3BarChartComponent],
 })
 export class D3Module { }

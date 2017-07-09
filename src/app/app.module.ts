@@ -12,9 +12,6 @@ import { VizContainerComponent } from './viz-container.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-// this has to be removed somehow
-import { D3BarChartComponent } from './d3/bar_chart/bar-chart.component';
-
 import { D3Module } from './d3/d3.module';
 @NgModule({
   imports: [
@@ -34,7 +31,6 @@ import { D3Module } from './d3/d3.module';
   providers: [
     VizService
   ],
-  entryComponents: [D3BarChartComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

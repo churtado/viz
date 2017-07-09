@@ -8,7 +8,7 @@ import { Viz } from './../../viz';
 import { D3Component } from './../../d3.component';
 
 declare function require(name: string);
-const d3 = require('d3');
+const d3 = require('d3v4');
 
 @Component({
     selector: 'app-d3bar-chart',
@@ -16,7 +16,7 @@ const d3 = require('d3');
 })
 export class D3BarChartComponent implements OnInit, D3Component {
 
-    data: any;
+    @Input() viz: Viz;
 
     constructor(
     ) { }
@@ -34,7 +34,7 @@ export class D3BarChartComponent implements OnInit, D3Component {
         const g = svg.append('g')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-        d3.tsv('./../../../assets/d3/simple_bar/data.tsv', function (d) {
+        d3.tsv('./../../../assets/spec/d3/simple_bar/data.tsv', function (d) {
             d.frequency = +d.frequency;
             return d;
         }, function (error, data) {

@@ -1,3 +1,5 @@
+import { Viz } from './viz';
+
 export interface D3Component {
-    data: any;
+    viz: Viz;
 }
