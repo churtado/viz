@@ -30,4 +30,7 @@ export class VizService {
             .map(res => res.json());
     }
 
+    getD3Component(viz: Viz) {
+    }
+
 }

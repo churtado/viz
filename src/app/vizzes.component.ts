@@ -29,7 +29,15 @@ export class VizzesComponent implements OnInit {
     this.vizService.getVizzes().then(vizzes => this.vizzes = vizzes);
   }
 
-  gotoDetail() {
-    this.router.navigate(['/viz', this.selectedViz.id]);
+  gotoDetail(viz: Viz) {
+    switch (viz.type) {
+      case 'vega':
+        this.router.navigate(['/vega', this.selectedViz.id]);
+        break;
+      case 'd3':
+        this.router.navigate(['/d3', this.selectedViz.id]);
+        break;
+    }
+
   }
 }

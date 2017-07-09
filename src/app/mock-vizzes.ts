@@ -1,4 +1,5 @@
 import { Viz } from './viz';
+import { D3BarChartComponent } from './d3/bar_chart/bar-chart.component';
 
 export const VIZZES: Viz[] = [
     {
@@ -42,5 +43,12 @@ export const VIZZES: Viz[] = [
         description: 'A parallel axis chart in vega',
         type: 'vega',
         specUrl: 'parallel_axis'
+    },
+    {
+        id: 7,
+        name: 'Bar Chart',
+        description: 'A bar chart in d3',
+        type: 'd3',
+        component: D3BarChartComponent
     }
 ];
