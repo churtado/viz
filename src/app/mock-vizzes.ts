@@ -1,5 +1,8 @@
 import { Viz } from './viz';
-import { D3BarChartComponent } from './d3/bar_chart/bar-chart.component';
+import {
+    D3BarChartComponent,
+    D3SpiderChartComponent,
+} from './d3';
 
 export const VIZZES: Viz[] = [
     {
@@ -56,6 +59,14 @@ export const VIZZES: Viz[] = [
         description: 'A bar chart in d3',
         type: 'd3',
         component: D3BarChartComponent,
+        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv'
+    },
+    {
+        id: 8,
+        name: 'Spider Chart',
+        description: 'A spider chart in d3',
+        type: 'd3',
+        component: D3SpiderChartComponent,
         dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv'
     }
 ];

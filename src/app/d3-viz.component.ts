@@ -12,13 +12,17 @@ import { VizService } from './viz.service';
 import { Viz } from './viz';
 
 import {
-    D3BarChartComponent
+    D3BarChartComponent,
+    D3SpiderChartComponent,
 } from './d3'; // './d3/bar_chart/bar-chart.component';
 
 @Component({
     selector: 'app-d3-viz',
     templateUrl: './d3-viz.component.html',
-    entryComponents: [D3BarChartComponent]
+    entryComponents: [
+        D3BarChartComponent,
+        D3SpiderChartComponent,
+    ]
 })
 export class D3VizComponent implements OnInit {
     @ViewChild('d3ComponentContainer', { read: ViewContainerRef }) dynamicComponentContainer: ViewContainerRef;
