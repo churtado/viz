@@ -256,17 +256,17 @@ export class D3SpiderChartComponent implements OnInit {
             // Wraps SVG text
             function wrap(text, width) {
                 text.each(function () {
-                    const text = d3.select(this),
-                        words = text.text().split(/\s+/).reverse(),
+                    const t = d3.select(this),
+                        words = t.text().split(/\s+/).reverse(),
                         lineHeight = 1.4, // ems
-                        y = text.attr('y'),
-                        x = text.attr('x'),
-                        dy = parseFloat(text.attr('dy'));
+                        y = t.attr('y'),
+                        x = t.attr('x'),
+                        dy = parseFloat(t.attr('dy'));
 
                     let word,
                         line = [],
                         lineNumber = 0,
-                        tspan = text.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', dy + 'em');
+                        tspan = t.text(null).append('tspan').attr('x', x).attr('y', y).attr('dy', dy + 'em');
 
 
 
@@ -278,7 +278,7 @@ export class D3SpiderChartComponent implements OnInit {
                             line.pop();
                             tspan.text(line.join(' '));
                             line = [word];
-                            tspan = text.append('tspan').attr('x', x).attr('y', y).
+                            tspan = t.append('tspan').attr('x', x).attr('y', y).
                                 attr('dy', ++lineNumber * lineHeight + dy + 'em').text(word);
                         }
                     }
