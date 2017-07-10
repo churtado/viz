@@ -11,8 +11,14 @@ declare function require(name: string);
 const d3 = require('d3v4');
 
 @Component({
+    moduleId: module.id,
     selector: 'app-d3bar-chart',
     templateUrl: './bar-chart.component.html',
+    styles: [`
+        /deep/.bar {
+            fill: steelblue;
+        }
+    `],
 })
 export class D3BarChartComponent implements OnInit, D3Component {
 

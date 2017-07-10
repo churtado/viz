@@ -1,1 +1,14 @@
-<app-d3bar-chart></app-d3bar-chart>
+<div *ngIf="viz">
+    <!-- Placeholder for the tooltip -->
+    <div id="viz-tooltip" class="vg-tooltip"></div>
+    <h2>{{viz.name}} details</h2>
+    <div>
+        <label>{{viz.name}}</label>
+    </div>
+    <div>
+        <label>{{viz.description}}</label>
+    </div>
+    <app-d3bar-chart></app-d3bar-chart>
+</div>
+<button (click)="goBack()">Back</button>
+

@@ -6,5 +6,7 @@ export class Viz {
   description: string;
   type: string;
   specUrl?: string;
+  tooltipSpecUrl?: string;
   component?: Type<any>;
+  dataUrl?: string;
 }

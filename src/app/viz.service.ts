@@ -21,12 +21,12 @@ export class VizService {
     }
 
     getSpec(viz: Viz) {
-        return this.http.get(`./../assets/spec/${viz.type}/${viz.specUrl}/spec.vg.json`)
+        return this.http.get(viz.specUrl)
             .map(res => res.json());
     }
 
     getVegaTooltipSpec(viz: Viz) {
-        return this.http.get(`./../assets/spec/vega/${viz.specUrl}/tooltip.json`)
+        return this.http.get(viz.tooltipSpecUrl)
             .map(res => res.json());
     }
 
