@@ -11,6 +11,5 @@ import { D3BarChartComponent } from './index';
         D3BarChartComponent,
     ],
     providers: [],
-    entryComponents: [D3BarChartComponent],
 })
 export class D3Module { }

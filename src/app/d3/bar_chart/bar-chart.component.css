@@ -1,0 +1,11 @@
+/deep/.bar {
+  fill: steelblue;
+}
+
+/deep/.bar:hover {
+  fill: brown;
+}
+
+/deep/.axis--x path {
+  display: none;
+}

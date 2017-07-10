@@ -1,11 +1,6 @@
-import 'rxjs/add/operator/switchMap';
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location } from '@angular/common';
 import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
-
-import { D3Component } from './../../d3.component';
 
 declare function require(name: string);
 const d3 = require('d3v4');
@@ -14,13 +9,9 @@ const d3 = require('d3v4');
     moduleId: module.id,
     selector: 'app-d3bar-chart',
     templateUrl: './bar-chart.component.html',
-    styles: [`
-        /deep/.bar {
-            fill: steelblue;
-        }
-    `],
+    styleUrls: ['./bar-chart.component.css']
 })
-export class D3BarChartComponent implements OnInit, D3Component {
+export class D3BarChartComponent implements OnInit {
 
     @Input() viz: Viz;
 
