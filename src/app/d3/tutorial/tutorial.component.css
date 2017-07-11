@@ -1,0 +1,22 @@
+/deep/.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/deep/.axis path {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/deep/.axis--x path {
+  display: none;
+}
+
+/deep/.bar {
+  fill: steelblue;
+}
+
+/deep/.bar:hover {
+  fill: brown;
+}

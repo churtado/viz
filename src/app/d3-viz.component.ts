@@ -14,6 +14,7 @@ import { Viz } from './viz';
 import {
     D3BarChartComponent,
     D3SpiderChartComponent,
+    D3TutorialComponent,
 } from './d3'; // './d3/bar_chart/bar-chart.component';
 
 @Component({
@@ -22,6 +23,7 @@ import {
     entryComponents: [
         D3BarChartComponent,
         D3SpiderChartComponent,
+        D3TutorialComponent
     ]
 })
 export class D3VizComponent implements OnInit {

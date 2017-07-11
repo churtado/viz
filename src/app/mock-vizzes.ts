@@ -2,6 +2,7 @@ import { Viz } from './viz';
 import {
     D3BarChartComponent,
     D3SpiderChartComponent,
+    D3TutorialComponent,
 } from './d3';
 
 export const VIZZES: Viz[] = [
@@ -68,5 +69,12 @@ export const VIZZES: Viz[] = [
         type: 'd3',
         component: D3SpiderChartComponent,
         dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv'
+    },
+    {
+        id: 9,
+        name: 'Tutorial',
+        description: 'For doing the d3 tutorials',
+        type: 'd3',
+        component: D3TutorialComponent
     }
 ];
