@@ -3,6 +3,8 @@ import {
     D3BarChartComponent,
     D3SpiderChartComponent,
     D3TutorialComponent,
+    D3ThreeCirclesComponent,
+    D3UpdatePatternComponent,
 } from './d3';
 
 export const VIZZES: Viz[] = [
@@ -76,5 +78,19 @@ export const VIZZES: Viz[] = [
         description: 'For doing the d3 tutorials',
         type: 'd3',
         component: D3TutorialComponent
+    },
+    {
+        id: 10,
+        name: '3 Circles',
+        description: '3 Circles tutorial',
+        type: 'd3',
+        component: D3ThreeCirclesComponent
+    },
+    {
+        id: 11,
+        name: 'Update Pattern',
+        description: 'Update pattern tutorial',
+        type: 'd3',
+        component: D3UpdatePatternComponent
     }
 ];
