@@ -1,9 +1,8 @@
-			
-/deep/.legend {
+:host  /deep/ .legend {
 	font-family: 'Raleway', sans-serif;
 	fill: #333333;
 }
 			
-/deep/.tooltip {
+:host /deep/ .tooltip {
 	fill: #333333;
 }

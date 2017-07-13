@@ -1,11 +1,11 @@
-/deep/.bar {
+:host /deep/ .bar {
   fill: steelblue;
 }
 
-/deep/.bar:hover {
+:host /deep/ .bar:hover {
   fill: brown;
 }
 
-/deep/.axis--x path {
+:host /deep/ .axis--x path {
   display: none;
 }
