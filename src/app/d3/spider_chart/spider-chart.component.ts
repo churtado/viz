@@ -4,7 +4,7 @@ import { Viz } from './../../viz';
 
 declare function require(name: string);
 // can be in v4 or not
-const d3 = require('d3');
+const d3 = require('d3@3.5.17');
 
 @Component({
     moduleId: module.id,

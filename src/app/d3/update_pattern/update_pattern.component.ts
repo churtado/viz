@@ -3,7 +3,7 @@ import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
 
 declare function require(name: string);
-const d3 = require('d3v4');
+const d3 = require('d3');
 
 @Component({
     moduleId: module.id,

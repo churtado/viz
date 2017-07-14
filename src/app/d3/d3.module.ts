@@ -6,6 +6,7 @@ import {
     D3TutorialComponent,
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
+    D3ObjectConstancyComponent,
 } from './index';
 
 @NgModule({
@@ -16,6 +17,7 @@ import {
         D3TutorialComponent,
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
+        D3ObjectConstancyComponent,
     ],
     exports: [
         D3BarChartComponent,
@@ -23,6 +25,7 @@ import {
         D3TutorialComponent,
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
+        D3ObjectConstancyComponent,
     ],
     providers: [],
 })

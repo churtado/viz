@@ -1,3 +1,9 @@
+# Niv
+Used this to install both versions of d3: mpn install d3 and niv install d3@3.5.17
+
+npm-install-version: npm install npm-install-version -g
+
+
 # Viz
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
