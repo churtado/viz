@@ -17,7 +17,6 @@ import {
     D3TutorialComponent,
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
-    D3ObjectConstancyComponent,
 } from './d3';
 
 @Component({
@@ -29,7 +28,6 @@ import {
         D3TutorialComponent,
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
-        D3ObjectConstancyComponent,
     ]
 })
 export class D3VizComponent implements OnInit {

@@ -1,0 +1,12 @@
+<h2>Dashes</h2>
+<ul class="dashes">
+    <li *ngFor="let dash of dashes" [class.selected]="dash === selectedDash" (click)="onSelect(dash)">
+        <span class="badge">{{dash.id}}</span> {{dash.name}}
+    </li>
+</ul>
+<div *ngIf="selectedDash">
+  <h2>
+    {{selectedDash.name }}
+  </h2>
+  <button (click)="gotoDetail(selectedDash)">View Dashboard</button>
+</div>

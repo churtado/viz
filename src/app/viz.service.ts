@@ -5,11 +5,22 @@ import 'rxjs/add/operator/map'
 
 import { Viz } from './viz';
 import { VIZZES } from './mock-vizzes';
+import { Dash } from './dash';
+import { DASHES } from './mock-dashes';
 
 @Injectable()
 export class VizService {
 
     constructor(private http: Http) { }
+
+    getDashes(): Promise<Dash[]> {
+        return Promise.resolve(DASHES);
+    }
+
+    getDash(id: number): Promise<Dash> {
+        return this.getDashes()
+            .then(dashes => dashes.find(dash => dash.id === id));
+    }
 
     getVizzes(): Promise<Viz[]> {
         return Promise.resolve(VIZZES);

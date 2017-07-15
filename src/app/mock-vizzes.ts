@@ -5,7 +5,6 @@ import {
     D3TutorialComponent,
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
-    D3ObjectConstancyComponent,
 } from './d3';
 
 export const VIZZES: Viz[] = [
@@ -93,20 +92,5 @@ export const VIZZES: Viz[] = [
         description: 'Update pattern tutorial',
         type: 'd3',
         component: D3UpdatePatternComponent
-    },
-    {
-        id: 12,
-        name: 'Object Constancy',
-        description: `Animations can serve a purpose. Sometimes when filtering a viz
-            certain objects may leave the viz and others may remain but some of
-            their properties may change: color, position, etc. In this case, it may
-            be more efficient to leave the element in the DOM and transition it using
-            an animation rather than reloading it from source. Also, if used properly,
-            the user may be able to use the movement as a preattentive attribute of
-            perception to track the change.  d3 can be more efficient because of the
-            saving afforded by not reloading all elements. For that, each datum must
-            have a key to identify it in order to update its properties.`,
-        type: 'd3',
-        component: D3ObjectConstancyComponent
     }
 ];
