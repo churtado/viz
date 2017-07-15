@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { VizzesComponent } from './vizzes.component';
 import { DashesComponent } from './dashes.component';
+import { DashComponent } from './dash.component';
 import { VegaVizComponent } from './vega-viz.component';
 import { D3VizComponent } from './d3-viz.component';
 import { VizService } from './viz.service';
@@ -27,6 +28,7 @@ import { D3Module } from './d3/d3.module';
     VizzesComponent,
     VegaVizComponent,
     D3VizComponent,
+    DashComponent,
   ],
   providers: [
     VizService
