@@ -1,12 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+    Component, OnInit,
+    ComponentFactoryResolver,
+    ViewContainerRef,
+    Input,
+    OnDestroy, ViewChild
+} from '@angular/core';
 
-import { Dash } from './dash';
 import { VizService } from './viz.service';
+import { Dash } from './dash'
+
+import {
+  DashComponent
+} from './dash/index';
 @Component({
   selector: 'app-dashes',
   templateUrl: './dashes.component.html',
   styleUrls: ['./dashes.component.css'],
+  entryComponents: [
+    DashComponent
+  ]
 })
 
 export class DashesComponent implements OnInit {
@@ -14,7 +26,6 @@ export class DashesComponent implements OnInit {
   selectedDash: Dash;
 
   constructor(
-    private router: Router,
     private vizService: VizService) { }
 
   ngOnInit(): void {
@@ -29,7 +40,4 @@ export class DashesComponent implements OnInit {
     this.vizService.getDashes().then(dashes => this.dashes = dashes);
   }
 
-  gotoDetail(dash: Dash) {
-    this.router.navigate(['/dash', this.selectedDash.id]);
-  }
 }

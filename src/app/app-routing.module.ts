@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { VizzesComponent } from './vizzes.component';
 import { DashesComponent } from './dashes.component';
-import { DashComponent } from './dash.component';
+import { DashComponent } from './dash/dash.component';
 import { VegaVizComponent } from './vega-viz.component';
 import { D3VizComponent } from './d3-viz.component';
 
