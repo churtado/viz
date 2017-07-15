@@ -1,1 +1,1 @@
-export * from './dash.component';
+export * from './test_dash/testdash.component';
