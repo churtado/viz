@@ -2,16 +2,12 @@
 <div *ngIf="viz">
     <!-- Placeholder for the tooltip -->
     <div id="viz-tooltip" class="vg-tooltip"></div>
-    <h2>{{viz.name}} details</h2>
-    <div>
-        <label>{{viz.name}}</label>
-    </div>
-    <div>
+    <h2 *ngIf="viz.showName">{{viz.name}}</h2>
+    <div *ngIf="viz.showDescription">
         <label>{{viz.description}}</label>
     </div>
+    <div id="view" [ngClass]="viz.width"></div>
 </div>
-
-<div id="view" class="view"></div>
-<div>
-    <button (click)="goBack()">Back</button>
+<div class="col-md-12">
+    <button (click)="goBack()" class="btn btn-default">Back</button>
 </div>

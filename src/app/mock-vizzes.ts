@@ -14,7 +14,10 @@ export const VIZZES: Viz[] = [
         description: 'A simple bar chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/tooltip.json',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 2,
@@ -22,7 +25,10 @@ export const VIZZES: Viz[] = [
         description: 'A stacked bar chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 3,
@@ -30,7 +36,10 @@ export const VIZZES: Viz[] = [
         description: 'A grouped bar chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 4,
@@ -38,7 +47,10 @@ export const VIZZES: Viz[] = [
         description: 'A nested bar chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json',
+        width: 'col-md-2',
+        showName: true,
+        showDescription: true
     },
     {
         id: 5,
@@ -46,7 +58,10 @@ export const VIZZES: Viz[] = [
         description: 'A population pyramid chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 6,
@@ -54,7 +69,10 @@ export const VIZZES: Viz[] = [
         description: 'A parallel axis chart in vega',
         type: 'vega',
         specUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json'
+        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 7,
@@ -62,7 +80,10 @@ export const VIZZES: Viz[] = [
         description: 'A bar chart in d3',
         type: 'd3',
         component: D3BarChartComponent,
-        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv'
+        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 8,
@@ -70,27 +91,39 @@ export const VIZZES: Viz[] = [
         description: 'A spider chart in d3',
         type: 'd3',
         component: D3SpiderChartComponent,
-        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv'
+        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 9,
         name: 'Tutorial',
         description: 'For doing the d3 tutorials',
         type: 'd3',
-        component: D3TutorialComponent
+        component: D3TutorialComponent,
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 10,
         name: '3 Circles',
         description: '3 Circles tutorial',
         type: 'd3',
-        component: D3ThreeCirclesComponent
+        component: D3ThreeCirclesComponent,
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     },
     {
         id: 11,
         name: 'Update Pattern',
         description: 'Update pattern tutorial',
         type: 'd3',
-        component: D3UpdatePatternComponent
+        component: D3UpdatePatternComponent,
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     }
 ];

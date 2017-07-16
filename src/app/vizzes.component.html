@@ -1,11 +1,14 @@
-<ul class="vizzes">
-    <li *ngFor="let viz of vizzes" [class.selected]="viz === selectedViz" (click)="onSelect(viz)">
-        <span class="badge">{{viz.id}}</span> {{viz.name}}
-    </li>
-</ul>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tr *ngFor="let viz of vizzes" (click)="onSelect(viz)">
+      <td>{{viz.name}}</td><td>{{viz.description}}</td>
+    </tr>
+  </table>
+</div>
+
 <div *ngIf="selectedViz">
   <h2>
     {{selectedViz.name }}
   </h2>
-  <button (click)="gotoDetail(selectedViz)">View Details</button>
+  <button (click)="gotoDetail(selectedViz)" class="btn btn-default">View Details</button>
 </div>
