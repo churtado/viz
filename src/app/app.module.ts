@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { AboutComponent } from './about.component';
+import { ContactComponent } from './contact.component';
 import { AppComponent } from './app.component';
 import { VizzesComponent } from './vizzes.component';
 import { DashesComponent } from './dashes.component';
@@ -25,10 +27,12 @@ import { D3Module } from './d3/d3.module';
   ],
   declarations: [
     AppComponent,
+    ContactComponent,
     DashesComponent,
     VizzesComponent,
     VegaVizComponent,
     D3VizComponent,
+    AboutComponent,
   ],
   providers: [
     VizService

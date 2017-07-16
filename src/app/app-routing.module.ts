@@ -6,6 +6,8 @@ import { DashesComponent } from './dashes.component';
 import * as Dash from './dash/index';
 import { VegaVizComponent } from './vega-viz.component';
 import { D3VizComponent } from './d3-viz.component';
+import { AboutComponent } from './about.component';
+import { ContactComponent } from './contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashes', pathMatch: 'full' },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'vizzes', component: VizzesComponent },
   { path: 'dashes', component: DashesComponent },
   { path: 'testdash', component: Dash.TestDashComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
