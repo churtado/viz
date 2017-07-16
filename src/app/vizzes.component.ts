@@ -22,22 +22,18 @@ export class VizzesComponent implements OnInit {
   }
 
   onSelect(viz: Viz): void {
-    this.selectedViz = viz;
+    switch (viz.type) {
+      case 'vega':
+        this.router.navigate(['/vega', viz.id]);
+        break;
+      case 'd3':
+        this.router.navigate(['/d3', viz.id]);
+        break;
+    }
   }
 
   getVizzes(): void {
     this.vizService.getVizzes().then(vizzes => this.vizzes = vizzes);
   }
 
-  gotoDetail(viz: Viz) {
-    switch (viz.type) {
-      case 'vega':
-        this.router.navigate(['/vega', this.selectedViz.id]);
-        break;
-      case 'd3':
-        this.router.navigate(['/d3', this.selectedViz.id]);
-        break;
-    }
-
-  }
 }

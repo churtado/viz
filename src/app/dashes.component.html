@@ -1,8 +1,11 @@
-<ul class="dashes">
-    <li *ngFor="let dash of dashes" [class.selected]="dash === selectedDash" (click)="onSelect(dash)">
-        <span class="badge">{{dash.id}}</span> {{dash.name}}
-    </li>
-</ul>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tr *ngFor="let dash of dashes" (click)="onSelect(dash)">
+      <td>{{dash.name}}</td><td>{{dash.description}}</td>
+    </tr>
+  </table>
+</div>
+
 <div *ngIf="selectedDash">
   <h2>
     {{selectedDash.name }}

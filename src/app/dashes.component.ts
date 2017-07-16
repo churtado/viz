@@ -35,14 +35,10 @@ export class DashesComponent implements OnInit {
   }
 
   onSelect(dash: Dash): void {
-    this.selectedDash = dash;
+    this.router.navigate(['testdash']);
   }
 
   getDashes(): void {
     this.vizService.getDashes().then(dashes => this.dashes = dashes);
-  }
-
-  gotoDetail(): void {
-    this.router.navigate(['testdash']);
   }
 }
