@@ -1,9 +1,9 @@
 import {
-    Component, OnInit,
-    ComponentFactoryResolver,
-    ViewContainerRef,
-    Input,
-    OnDestroy, ViewChild
+  Component, OnInit,
+  ComponentFactoryResolver,
+  ViewContainerRef,
+  Input,
+  OnDestroy, ViewChild
 } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -24,7 +24,6 @@ import {
 
 export class DashesComponent implements OnInit {
   dashes: Dash[];
-  selectedDash: Dash;
 
   constructor(
     private router: Router,
@@ -35,7 +34,7 @@ export class DashesComponent implements OnInit {
   }
 
   onSelect(dash: Dash): void {
-    this.router.navigate(['testdash']);
+    this.router.navigate([dash.url]);
   }
 
   getDashes(): void {

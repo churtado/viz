@@ -11,7 +11,6 @@ import { VizService } from './viz.service';
 
 export class VizzesComponent implements OnInit {
   vizzes: Viz[];
-  selectedViz: Viz;
 
   constructor(
     private router: Router,
