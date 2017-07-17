@@ -1,8 +1,10 @@
-# Niv
-Used this to install both versions of d3: mpn install d3 and niv install d3@3.5.17
+# Installing
+Install this to install older versions of d3: 
 
-npm-install-version: npm install npm-install-version -g
+npm install npm-install-version -g
+niv d3@3.5.17
 
+Then do npm install and then npm start
 
 # Viz
 
