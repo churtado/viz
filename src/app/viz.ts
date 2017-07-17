@@ -8,6 +8,7 @@ export class Viz {
   width: string;
   showName: boolean;
   showDescription: boolean;
+  tags?: string[];
   specUrl?: string;
   tooltipSpecUrl?: string;
   component?: Type<any>;

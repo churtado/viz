@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { VizzesComponent } from './vizzes.component';
 import { DashesComponent } from './dashes.component';
 import { VegaVizComponent } from './vega-viz.component';
+import { VegaliteVizComponent } from './vegalite-viz.component';
 import { D3VizComponent } from './d3-viz.component';
 import { VizService } from './viz.service';
 
@@ -31,6 +32,7 @@ import { D3Module } from './d3/d3.module';
     DashesComponent,
     VizzesComponent,
     VegaVizComponent,
+    VegaliteVizComponent,
     D3VizComponent,
     AboutComponent,
   ],

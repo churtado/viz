@@ -22,6 +22,9 @@ export class VizzesComponent implements OnInit {
 
   onSelect(viz: Viz): void {
     switch (viz.type) {
+      case 'vega-lite':
+        this.router.navigate(['/vegalite', viz.id]);
+        break;
       case 'vega':
         this.router.navigate(['/vega', viz.id]);
         break;

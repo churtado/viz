@@ -125,5 +125,14 @@ export const VIZZES: Viz[] = [
         width: 'col-md-3',
         showName: true,
         showDescription: true
+    },
+    {
+        id: 12,
+        name: 'Vega Lite',
+        description: 'A vega lite component',
+        type: 'vega-lite',
+        width: 'col-md-3',
+        showName: true,
+        showDescription: true
     }
 ];
