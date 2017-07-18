@@ -7,7 +7,7 @@ import { Viz } from './viz';
 
 declare function require(name: string);
 const vega = require('vega');
-
+const vegaTooltip = require('vega-tooltip');
 
 @Component({
     selector: 'app-vega-viz',
@@ -43,8 +43,16 @@ export class VegaVizComponent implements OnInit {
                         .hover()             // enable hover encode set processing
                         .run();              // run the dataflow and render the view
 
+                    this.vizService
+                        .getVegaTooltipSpec(viz)
+                        .subscribe((tooltipOptions) => {
+                            vegaTooltip.vega(view, tooltipOptions);
+                        });
+
                 })
+
             });
+
     }
 
     goBack(): void {
