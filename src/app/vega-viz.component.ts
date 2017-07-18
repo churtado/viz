@@ -50,9 +50,7 @@ export class VegaVizComponent implements OnInit {
                         });
 
                 })
-
             });
-
     }
 
     goBack(): void {

@@ -9,6 +9,7 @@ declare function require(name: string);
 const vega = require('vega');
 const vegaLite = require('vega-lite');
 vega.embed = require('vega-embed');
+const vegaTooltip = require('vega-tooltip');
 
 @Component({
     selector: 'app-vegalite-viz',
@@ -26,7 +27,7 @@ export class VegaliteVizComponent implements OnInit {
     ngOnInit(): void {
 
 
-        const yourVlSpec = {
+        const spec = {
             '$schema': 'https://vega.github.io/schema/vega-lite/v2.0.json',
             'description': 'A simple bar chart with embedded data.',
             'data': {
@@ -42,7 +43,28 @@ export class VegaliteVizComponent implements OnInit {
                 'y': { 'field': 'b', 'type': 'quantitative' }
             }
         }
-        vega.embed('#view', yourVlSpec);
+
+        const options = {
+            'mode': 'vega-lite'
+            // ,
+            // 'renderer': 'svg',
+            // 'padding': { left: 0, top: 0, right: 0, bottom: 0 },
+            // 'actions': false,
+        };
+
+        // const tooltipOptions = {
+        //     showAllFields: true,
+        //     fields: [
+        //         {
+        //             field: 'a',
+        //             title: 'Field a',
+        //             formatType: 'string'
+        //         }]
+        // };
+
+        vega.embed('#view', spec, options, function (error, result) {
+            vegaTooltip.vegaLite(result.view, spec);
+        });
 
     }
 
