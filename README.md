@@ -1,4 +1,7 @@
 # Installing
+For parsing shapefiles:
+npm install -g shapefile
+
 Install this to install older versions of d3: 
 
 npm install npm-install-version -g
