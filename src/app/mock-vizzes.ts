@@ -5,6 +5,7 @@ import {
     D3TutorialComponent,
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
+    D3MapComponent
 } from './d3';
 
 export const VIZZES: Viz[] = [
@@ -128,9 +129,10 @@ export const VIZZES: Viz[] = [
     },
     {
         id: 12,
-        name: 'Vega Lite',
-        description: 'A vega lite component',
-        type: 'vega-lite',
+        name: 'Map',
+        description: 'Map using topojson',
+        type: 'd3',
+        component: D3MapComponent,
         width: 'col-md-3',
         showName: true,
         showDescription: true
