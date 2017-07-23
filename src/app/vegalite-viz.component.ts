@@ -8,8 +8,8 @@ import { Viz } from './viz';
 declare function require(name: string);
 const vega = require('vega');
 const vegaLite = require('vega-lite');
-vega.embed = require('vega-embed');
 const vegaTooltip = require('vega-tooltip');
+vega.embed = require('vega-embed');
 
 @Component({
     selector: 'app-vegalite-viz',
@@ -45,11 +45,10 @@ export class VegaliteVizComponent implements OnInit {
         }
 
         const options = {
-            'mode': 'vega-lite'
-            // ,
-            // 'renderer': 'svg',
+            'mode': 'vega-lite',
+             'renderer': 'svg',
             // 'padding': { left: 0, top: 0, right: 0, bottom: 0 },
-            // 'actions': false,
+            'actions': false
         };
 
         // const tooltipOptions = {
@@ -62,9 +61,10 @@ export class VegaliteVizComponent implements OnInit {
         //         }]
         // };
 
-        vega.embed('#view', spec, options, function (error, result) {
+        vega.embed('#view', spec, options).then((error, result) => {
             vegaTooltip.vegaLite(result.view, spec);
         });
+        //vegaTooltip.vegaLite('#view', spec);
 
     }
 
