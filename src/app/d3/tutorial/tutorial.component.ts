@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
 
@@ -9,7 +9,8 @@ const d3 = require('d3');
     moduleId: module.id,
     selector: 'app-d3tutorial',
     templateUrl: './tutorial.component.html',
-    styleUrls: ['./tutorial.component.css']
+    styleUrls: ['./tutorial.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class D3TutorialComponent implements OnInit {
 

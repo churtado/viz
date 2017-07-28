@@ -4,7 +4,7 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { Viz } from './viz';
-import { VIZZES } from './mock-vizzes';
+import { ALLVIZZES } from './mock-vizzes';
 import { Dash } from './dash';
 import { DASHES } from './mock-dashes';
 
@@ -23,7 +23,7 @@ export class VizService {
     }
 
     getVizzes(): Promise<Viz[]> {
-        return Promise.resolve(VIZZES);
+        return Promise.resolve(ALLVIZZES);
     }
 
     getViz(id: number): Promise<Viz> {

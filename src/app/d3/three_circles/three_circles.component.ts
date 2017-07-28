@@ -1,6 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
+import {
+    D3Service, D3,
+    Selection, Axis,
+    ScaleLinear, ScaleBand,
+} from 'd3-ng2-service';
 
 declare function require(name: string);
 const d3 = require('d3');
@@ -9,7 +14,8 @@ const d3 = require('d3');
     moduleId: module.id,
     selector: 'app-d3tutorial',
     templateUrl: './three_circles.component.html',
-    styleUrls: ['./three_circles.component.css']
+    styleUrls: ['./three_circles.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class D3ThreeCirclesComponent implements OnInit {
 

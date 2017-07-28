@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
 
@@ -10,7 +10,8 @@ const d3 = require('d3@3.5.17');
     moduleId: module.id,
     selector: 'app-d3spider-chart',
     templateUrl: './spider-chart.component.html',
-    styleUrls: ['./spider-chart.component.css']
+    styleUrls: ['./spider-chart.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class D3SpiderChartComponent implements OnInit {
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
 import { Viz } from './../../viz';
 
@@ -9,7 +9,8 @@ const d3 = require('d3');
     moduleId: module.id,
     selector: 'app-d3-updatepattern',
     templateUrl: './update_pattern.component.html',
-    styleUrls: ['./update_pattern.component.css']
+    styleUrls: ['./update_pattern.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class D3UpdatePatternComponent implements OnInit {
 

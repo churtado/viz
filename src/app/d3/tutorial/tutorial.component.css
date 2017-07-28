@@ -1,22 +1,22 @@
-:host /deep/ .axis line {
+.axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-:host /deep/ .axis path {
+.axis path {
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-:host /deep/ .axis--x path {
+.axis--x path {
   display: none;
 }
 
-:host /deep/ .bar {
+.bar {
   fill: steelblue;
 }
 
-:host /deep/ .bar:hover {
+.bar:hover {
   fill: brown;
 }

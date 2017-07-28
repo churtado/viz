@@ -8,15 +8,12 @@ import {
 
 import { D3VizService } from './../d3Viz.service';
 
-// declare function require(name: string);
-// const d3 = require('d3');
-
 @Component({
     moduleId: module.id,
     selector: 'app-d3bar-chart',
     templateUrl: './bar-chart.component.html',
     styleUrls: [ './bar-chart.component.css' ],
-    encapsulation: ViewEncapsulation.Emulated
+    encapsulation: ViewEncapsulation.None
 })
 export class D3BarChartComponent implements OnInit, OnDestroy {
 
@@ -47,10 +44,10 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
 
         if (this.parentNativeElement !== null) {
 
-            let width = 800,
-                height = 600;
+            let width = this.viz.graphWidth,
+                height = this.viz.graphHeight;
 
-            const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+            const margins = this.viz.margins;
 
             d3ParentElement = d3.select(this.parentNativeElement);
             d3Svg = this.d3Svg = d3ParentElement.select<SVGSVGElement>('svg');
@@ -58,14 +55,14 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
             this.d3Svg.attr('width', width);
             this.d3Svg.attr('height', height);
 
-            width = width - (margin.left + margin.right),
-                height = height - (margin.top + margin.bottom);
+            width = width - (margins.left + margins.right),
+                height = height - (margins.top + margins.bottom);
 
             const x: ScaleBand<string> = d3.scaleBand().rangeRound([0, width]).padding(0.1);
             const y: ScaleLinear<number, number> = d3.scaleLinear().rangeRound([height, 0]);
 
             const d3G: Selection<SVGGElement, any, null, undefined> =
-                d3Svg.append<SVGGElement>('g').attr('transform', `translate(${margin.left}, ${margin.top})`);
+                d3Svg.append<SVGGElement>('g').attr('transform', `translate(${margins.left}, ${margins.top})`);
 
             this.d3VizService.getD3Data(this.viz.dataUrl).subscribe((response) => {
 
