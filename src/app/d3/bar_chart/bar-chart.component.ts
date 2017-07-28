@@ -66,7 +66,7 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
             const d3G: Selection<SVGGElement, any, null, undefined> =
                 d3Svg.append<SVGGElement>('g').attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-            this.d3VizService.getD3Data(this.viz).subscribe((response) => {
+            this.d3VizService.getD3Data(this.viz.dataUrl).subscribe((response) => {
 
                 const data = d3.tsvParseRows(response['_body']);
                 data.shift();
