@@ -15,9 +15,9 @@ export class D3VizService {
         this.http = http;
     }
 
-    getD3Data() {
+    getD3Data(viz: Viz) {
         const url = 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv';
-        return this.http.get(url);
+        return this.http.get(viz.dataUrl);
             /**
              * could come in handy later
              * if I include mapping steps

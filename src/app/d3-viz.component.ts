@@ -35,7 +35,7 @@ import {
 export class D3VizComponent implements OnInit {
     @ViewChild('d3ComponentContainer', { read: ViewContainerRef }) dynamicComponentContainer: ViewContainerRef;
 
-    @Input() viz: Viz
+    private viz: Viz
 
     constructor(
         private vizService: VizService,
@@ -57,6 +57,7 @@ export class D3VizComponent implements OnInit {
                 // load the component specified in the viz
                 const factory = this.componentFactoryResolver.resolveComponentFactory(this.viz.component);
                 const ref = this.viewContainerRef.createComponent(factory);
+                ref.instance.viz = this.viz;
                 this.dynamicComponentContainer.insert(ref.hostView);
             });
     }

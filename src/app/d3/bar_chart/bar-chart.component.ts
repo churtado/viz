@@ -24,7 +24,7 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
     private parentNativeElement: any;
     private d3Svg: Selection<SVGSVGElement, any, null, undefined>;
 
-    @Input() viz: Viz;
+    private viz: Viz;
 
     constructor(
         element: ElementRef,
@@ -66,7 +66,7 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
             const d3G: Selection<SVGGElement, any, null, undefined> =
                 d3Svg.append<SVGGElement>('g').attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-            this.d3VizService.getD3Data().subscribe((response) => {
+            this.d3VizService.getD3Data(this.viz).subscribe((response) => {
 
                 const data = d3.tsvParseRows(response['_body']);
                 data.shift();
