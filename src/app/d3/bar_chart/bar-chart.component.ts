@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, OnDestroy, OnInit, Input } from '@angular/core';
+import { Component, ElementRef, NgZone, OnDestroy, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Viz } from './../../viz';
 import {
     D3Service, D3,
@@ -15,7 +15,8 @@ import { D3VizService } from './../d3Viz.service';
     moduleId: module.id,
     selector: 'app-d3bar-chart',
     templateUrl: './bar-chart.component.html',
-    styleUrls: ['./bar-chart.component.css']
+    styleUrls: [ './bar-chart.component.css' ],
+    encapsulation: ViewEncapsulation.Emulated
 })
 export class D3BarChartComponent implements OnInit, OnDestroy {
 
