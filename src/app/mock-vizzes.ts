@@ -13,7 +13,7 @@ import {
     D3MapComponent
 } from './d3';
 
-const VEGAVIZZES: VegaViz[] = [
+export const VEGAVIZZES: VegaViz[] = [
     {
         id: 1,
         name: 'Simple Bar Chart',
@@ -24,7 +24,7 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 7,
         containerId: '',
         component: D3BarChartComponent
     },
@@ -38,7 +38,7 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 8,
         containerId: '',
         component: D3BarChartComponent
     },
@@ -52,7 +52,7 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 9,
         containerId: '',
         component: D3BarChartComponent
     },
@@ -66,7 +66,7 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-2',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 10,
         containerId: '',
         component: D3BarChartComponent
     },
@@ -80,7 +80,7 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 11,
         containerId: '',
         component: D3BarChartComponent
     },
@@ -94,30 +94,14 @@ const VEGAVIZZES: VegaViz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 12,
         containerId: '',
         component: D3BarChartComponent
     }
 ]
 
 export const D3VIZZES: D3Viz[] = [
-    {
-        id: 7,
-        name: 'D3BarChart',
-        description: 'A bar chart in d3',
-        type: 'd3',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 1,
-        containerId: '',
 
-        component: D3BarChartComponent,
-        dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-        graphWidth: 800,
-        graphHeight: 600,
-        margins: { top: 20, right: 20, bottom: 30, left: 40 }
-    },
     {
         id: 8,
         name: 'Spider Chart',
@@ -126,9 +110,8 @@ export const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 2,
         containerId: '',
-
         component: D3SpiderChartComponent,
         dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
         graphWidth: 800,
@@ -143,9 +126,8 @@ export const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 3,
         containerId: '',
-
         component: D3TutorialComponent,
         dataUrl: '',
         graphWidth: 800,
@@ -161,9 +143,8 @@ export const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 4,
         containerId: '',
-
         component: D3ThreeCirclesComponent,
         dataUrl: '',
         graphWidth: 800,
@@ -179,9 +160,8 @@ export const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 5,
         containerId: '',
-
         component: D3UpdatePatternComponent,
         dataUrl: '',
         graphWidth: 800,
@@ -196,9 +176,8 @@ export const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
-        dashId: 1,
+        dashId: 6,
         containerId: '',
-
         component: D3MapComponent,
         dataUrl: '',
         graphWidth: 800,
@@ -213,7 +192,26 @@ export const DASHES: Dash[] = [
     {
         id: 1,
         name: 'Test Dashboard',
-        description: 'Testing out making a simple dashboard',
-        url: '/testdash'
+        description: 'A bar chart in d3',
+        url: '/testdash',
+        d3Vizzes: [
+            {
+                id: 7,
+                name: 'D3BarChart',
+                description: 'A bar chart in d3',
+                type: 'd3',
+                containerWidth: 'col-md-3',
+                showName: true,
+                showDescription: true,
+                dashId: 1,
+                containerId: '',
+                component: D3BarChartComponent,
+                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
+                graphWidth: 800,
+                graphHeight: 600,
+                margins: { top: 20, right: 20, bottom: 30, left: 40 }
+            },
+        ],
+        vegaVizzes: []
     }
 ];

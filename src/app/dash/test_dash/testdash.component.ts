@@ -4,7 +4,9 @@ import {
     ComponentFactoryResolver,
     OnDestroy, ViewContainerRef
 } from '@angular/core';
-import { Viz, D3Viz } from './../../viz';
+import { DashService } from './../dash.service';
+
+import { Dash, D3Viz, Viz } from './../../viz';
 import { ALLVIZZES, D3VIZZES } from './../../mock-vizzes';
 
 import {
@@ -21,28 +23,50 @@ import {
 })
 export class TestDashComponent implements OnInit {
 
-    // @ViewChild('myname') input:ElementRef;
-    @ViewChild('D3BarChartComponent', { read: ViewContainerRef }) dynamicComponentContainer: ViewContainerRef;
+    /**
+     * Here we define where our vizzes will go
+     */
+    @ViewChild('D3BarChartComponent', { read: ViewContainerRef }) barchartComponentContainer: ViewContainerRef;
 
-    private d3Vizzes: D3Viz[] = [];
+    private dash: Dash;
 
     constructor(
         private componentFactoryResolver: ComponentFactoryResolver,
         private viewContainerRef: ViewContainerRef,
+        private dashService: DashService,
     ) { }
 
     ngOnInit(): void {
-        // get the vizzes used for the dashboard
-        // this.d3Vizzes.push(D3VIZZES[0]);
 
-        // attach the component to its div
-        // for each viz you'll have to do this
-        const factory = this.componentFactoryResolver
-            .resolveComponentFactory(D3BarChartComponent);
-        const ref = this.viewContainerRef.createComponent(factory);
-        // ref.instance.viz = this.d3Vizzes[0];
-        ref.instance.viz = D3VIZZES[0];
-        this.dynamicComponentContainer.insert(ref.hostView);
+        /**
+         * building the list of child containers
+         */
+        const containers = [
+            {
+                name: 'D3BarChart',
+                container: this.barchartComponentContainer
+            }
+        ];
+
+        // get the vizzes used for the dashboard
+        this.dashService.getDash(1).then((dash) => {
+            this.dash = dash;
+
+            this.dash.d3Vizzes.forEach((viz: D3Viz) => {
+                this.insertViz(viz, containers);
+            })
+        });
+
+    }
+
+    private insertViz(
+        viz: Viz,
+        containers: { name: string, container: ViewContainerRef }[]) {
+        const ref = this.viewContainerRef.createComponent(
+            this.componentFactoryResolver.resolveComponentFactory(viz.component));
+
+        ref.instance.viz = viz;
+        containers.find((e) => e.name === viz.name).container.insert(ref.hostView);
     }
 
 }

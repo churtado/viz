@@ -36,4 +36,6 @@ export class Dash {
   name: string;
   description: string;
   url: string;
+  d3Vizzes: D3Viz[];
+  vegaVizzes: VegaViz[];
 }
