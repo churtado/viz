@@ -64,7 +64,7 @@ export class VegaliteVizComponent implements OnInit {
         vega.embed('#view', spec, options).then((error, result) => {
             vegaTooltip.vegaLite(result.view, spec);
         });
-        //vegaTooltip.vegaLite('#view', spec);
+        // vegaTooltip.vegaLite('#view', spec);
 
     }
 

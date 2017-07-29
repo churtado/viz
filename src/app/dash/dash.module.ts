@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
+import { D3Module } from './../d3/d3.module';
 
 import {
     TestDashComponent,
 } from './index';
 
 @NgModule({
-    imports: [],
+    imports: [
+        D3Module,
+    ],
     declarations: [
         TestDashComponent,
     ],

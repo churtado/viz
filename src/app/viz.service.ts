@@ -3,10 +3,8 @@ import { Http, Response } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
-import { Viz } from './viz';
-import { ALLVIZZES } from './mock-vizzes';
-import { Dash } from './dash';
-import { DASHES } from './mock-dashes';
+import { Viz, VegaViz, Dash } from './viz';
+import { ALLVIZZES, DASHES } from './mock-vizzes';
 
 @Injectable()
 export class VizService {
@@ -31,12 +29,12 @@ export class VizService {
             .then(vizzes => vizzes.find(viz => viz.id === id));
     }
 
-    getSpec(viz: Viz) {
+    getSpec(viz: VegaViz) {
         return this.http.get(viz.specUrl)
             .map(res => res.json());
     }
 
-    getVegaTooltipSpec(viz: Viz) {
+    getVegaTooltipSpec(viz: VegaViz) {
         return this.http.get(viz.tooltipSpecUrl)
             .map(res => res.json());
     }

@@ -1,8 +1,8 @@
 import {
-    Viz,
     D3Viz,
     VegaViz,
-    VizI
+    Viz,
+    Dash
 } from './viz';
 import {
     D3BarChartComponent,
@@ -23,7 +23,10 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/tooltip.json',
         containerWidth: 'col-md-3',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     },
     {
         id: 2,
@@ -34,7 +37,10 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json',
         containerWidth: 'col-md-3',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     },
     {
         id: 3,
@@ -45,7 +51,10 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json',
         containerWidth: 'col-md-3',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     },
     {
         id: 4,
@@ -56,7 +65,10 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json',
         containerWidth: 'col-md-2',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     },
     {
         id: 5,
@@ -67,7 +79,10 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json',
         containerWidth: 'col-md-3',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     },
     {
         id: 6,
@@ -78,19 +93,24 @@ const VEGAVIZZES: VegaViz[] = [
         tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json',
         containerWidth: 'col-md-3',
         showName: true,
-        showDescription: true
+        showDescription: true,
+        dashId: 1,
+        containerId: '',
+        component: D3BarChartComponent
     }
 ]
 
-const D3VIZZES: D3Viz[] = [
+export const D3VIZZES: D3Viz[] = [
     {
         id: 7,
-        name: 'Bar Chart',
+        name: 'D3BarChart',
         description: 'A bar chart in d3',
         type: 'd3',
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3BarChartComponent,
         dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
@@ -106,6 +126,8 @@ const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3SpiderChartComponent,
         dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
@@ -121,6 +143,8 @@ const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3TutorialComponent,
         dataUrl: '',
@@ -137,6 +161,8 @@ const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3ThreeCirclesComponent,
         dataUrl: '',
@@ -153,6 +179,8 @@ const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3UpdatePatternComponent,
         dataUrl: '',
@@ -168,6 +196,8 @@ const D3VIZZES: D3Viz[] = [
         containerWidth: 'col-md-3',
         showName: true,
         showDescription: true,
+        dashId: 1,
+        containerId: '',
 
         component: D3MapComponent,
         dataUrl: '',
@@ -178,3 +208,12 @@ const D3VIZZES: D3Viz[] = [
 ];
 
 export const ALLVIZZES: (VegaViz | D3Viz)[] = [...VEGAVIZZES, ...D3VIZZES];
+
+export const DASHES: Dash[] = [
+    {
+        id: 1,
+        name: 'Test Dashboard',
+        description: 'Testing out making a simple dashboard',
+        url: '/testdash'
+    }
+];

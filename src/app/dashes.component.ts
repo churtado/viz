@@ -8,7 +8,7 @@ import {
 import { Router } from '@angular/router';
 
 import { VizService } from './viz.service';
-import { Dash } from './dash'
+import { Dash } from './viz'
 
 import {
   TestDashComponent

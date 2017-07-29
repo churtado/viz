@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { VizService } from './viz.service';
-import { Viz } from './viz';
+import { VegaViz } from './viz';
 
 declare function require(name: string);
 const vega = require('vega');
@@ -14,7 +14,7 @@ const vegaTooltip = require('vega-tooltip');
     templateUrl: './vega-viz.component.html',
 })
 export class VegaVizComponent implements OnInit {
-    @Input() viz: Viz;
+    @Input() viz: VegaViz;
 
     constructor(
         private vizService: VizService,
@@ -28,7 +28,7 @@ export class VegaVizComponent implements OnInit {
             // get the viz object observable
             .switchMap((params: ParamMap) => this.vizService.getViz(+params.get('id')))
             // subscribe to get the viz value
-            .subscribe((viz: Viz) => {
+            .subscribe((viz: VegaViz) => {
                 // attach it to the component
                 this.viz = viz;
                 // render vega component

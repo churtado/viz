@@ -1,5 +1,5 @@
 import { Component, ElementRef, NgZone, OnDestroy, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { Viz } from './../../viz';
+import { D3Viz } from './../../viz';
 import {
     D3Service, D3,
     Selection, Axis,
@@ -22,7 +22,7 @@ export class D3BarChartComponent implements OnInit, OnDestroy {
     private parentNativeElement: any;
     private d3Svg: Selection<SVGSVGElement, any, null, undefined>;
 
-    private viz: Viz;
+    viz: D3Viz;
 
     constructor(
         element: ElementRef,
