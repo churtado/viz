@@ -10,15 +10,13 @@ import { Router } from '@angular/router';
 import { VizService } from './viz.service';
 import { Dash } from './viz'
 
-import {
-  TestDashComponent
-} from './dash/index';
+import * as dashes from './dash/index';
 @Component({
   selector: 'app-dashes',
   templateUrl: './dashes.component.html',
   styleUrls: ['./dashes.component.css'],
   entryComponents: [
-    TestDashComponent
+    dashes.BarchartDashComponent
   ]
 })
 

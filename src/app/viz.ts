@@ -38,4 +38,5 @@ export class Dash {
   url: string;
   d3Vizzes: D3Viz[];
   vegaVizzes: VegaViz[];
+  component: Type<any>;
 }

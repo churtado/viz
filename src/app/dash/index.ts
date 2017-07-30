@@ -1,1 +1,1 @@
-export * from './test_dash/testdash.component';
+export * from './bar_chart/barchart.component';
