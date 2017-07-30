@@ -345,10 +345,10 @@ export const DASHES: Dash[] = [
         name: '3 circles',
         description: '3 circles in d3',
         url: 'three_circles',
-        component: dashes.BarchartDashComponent,
+        component: dashes.ThreeCirclesDashComponent,
         d3Vizzes: [
             {
-                id: 7,
+                id: 1,
                 name: 'D3BarChart',
                 description: 'A bar chart in d3',
                 type: 'd3',

@@ -12,10 +12,12 @@ import * as dashes from './index';
     declarations: [
         dashes.BarchartDashComponent,
         dashes.MapDashComponent,
+        dashes.ThreeCirclesDashComponent,
     ],
     exports: [
         dashes.BarchartDashComponent,
         dashes.MapDashComponent,
+        dashes.ThreeCirclesDashComponent,
     ],
     providers: [
         DashService,

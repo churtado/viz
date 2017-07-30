@@ -10,23 +10,23 @@ import { Dash, D3Viz, Viz } from './../../viz';
 import { ALLVIZZES, D3VIZZES } from './../../mock-vizzes';
 
 import {
-    D3BarChartComponent,
+    D3ThreeCirclesComponent,
 } from './../../d3';
 
 @Component({
     selector: 'app-dash',
-    templateUrl: './testdash.component.html',
-    styleUrls: ['./testdash.component.css'],
+    templateUrl: './three-circles-dash.component.html',
+    styleUrls: ['./three-circles-dash.component.css'],
     entryComponents: [
-        D3BarChartComponent,
+        D3ThreeCirclesComponent,
     ]
 })
-export class TestDashComponent implements OnInit {
+export class ThreeCirclesDashComponent implements OnInit {
 
     /**
      * Here we define where our vizzes will go
      */
-    @ViewChild('D3BarChartComponent', { read: ViewContainerRef }) barchartComponentContainer: ViewContainerRef;
+    @ViewChild('D3ThreeCirclesComponent', { read: ViewContainerRef }) barchartComponentContainer: ViewContainerRef;
 
     private dash: Dash;
 
@@ -43,7 +43,7 @@ export class TestDashComponent implements OnInit {
          */
         const containers = [
             {
-                name: 'D3BarChart',
+                name: 'D3ThreeCirclesComponent',
                 container: this.barchartComponentContainer
             }
         ];
