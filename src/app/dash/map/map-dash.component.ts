@@ -10,23 +10,23 @@ import { Dash, D3Viz, Viz } from './../../viz';
 import { ALLVIZZES, D3VIZZES } from './../../mock-vizzes';
 
 import {
-    D3BarChartComponent,
+    D3MapComponent,
 } from './../../d3';
 
 @Component({
     selector: 'app-dash',
-    templateUrl: './testdash.component.html',
-    styleUrls: ['./testdash.component.css'],
+    templateUrl: './map-dash.component.html',
+    styleUrls: ['./map-dash.component.css'],
     entryComponents: [
-        D3BarChartComponent,
+        D3MapComponent,
     ]
 })
-export class TestDashComponent implements OnInit {
+export class MapDashComponent implements OnInit {
 
     /**
      * Here we define where our vizzes will go
      */
-    @ViewChild('D3BarChartComponent', { read: ViewContainerRef }) barchartComponentContainer: ViewContainerRef;
+    @ViewChild('D3MapComponent', { read: ViewContainerRef }) mapComponentContainer: ViewContainerRef;
 
     private dash: Dash;
 
@@ -43,13 +43,13 @@ export class TestDashComponent implements OnInit {
          */
         const containers = [
             {
-                name: 'D3BarChart',
-                container: this.barchartComponentContainer
+                name: 'D3MapComponent',
+                container: this.mapComponentContainer
             }
         ];
 
         // get the vizzes used for the dashboard
-        this.dashService.getDash(1).then((dash) => {
+        this.dashService.getDash(6).then((dash) => {
             this.dash = dash;
 
             this.dash.d3Vizzes.forEach((viz: D3Viz) => {

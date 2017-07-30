@@ -11,9 +11,11 @@ import * as dashes from './index';
     ],
     declarations: [
         dashes.BarchartDashComponent,
+        dashes.MapDashComponent,
     ],
     exports: [
         dashes.BarchartDashComponent,
+        dashes.MapDashComponent,
     ],
     providers: [
         DashService,

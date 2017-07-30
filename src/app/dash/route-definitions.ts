@@ -8,7 +8,6 @@ export let routes: Routes = [];
  * and configure them in only one place
  * maybe later I'll make a service
  */
-
 DASHES.forEach((dash) => {
     routes.push(
         {
@@ -17,15 +16,5 @@ DASHES.forEach((dash) => {
         }
     );
 });
-
-
-
-
-// const routes: Routes = [
-//     {
-//         path: 'bar_chart',
-//         component: Dash.TestDashComponent,
-//     },
-// ];
 
 export const dashRouting = RouterModule.forRoot(routes);

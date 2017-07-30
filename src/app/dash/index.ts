@@ -1,1 +1,2 @@
-export * from './bar_chart/barchart.component';
+export * from './bar_chart/barchart-dash.component';
+export * from './map/map-dash.component';

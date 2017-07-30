@@ -15,8 +15,8 @@ import {
 
 @Component({
     selector: 'app-dash',
-    templateUrl: './testdash.component.html',
-    styleUrls: ['./testdash.component.css'],
+    templateUrl: './groupedbar.component.html',
+    styleUrls: ['./groupedbar.component.css'],
     entryComponents: [
         D3BarChartComponent,
     ]
