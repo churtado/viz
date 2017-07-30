@@ -1,4 +1,4 @@
-# Installing
+# Pre-requisites
 For parsing shapefiles:
 npm install -g shapefile
 
@@ -7,7 +7,9 @@ Install this to install older versions of d3:
 npm install npm-install-version -g
 niv d3@3.5.17
 
-Then do npm install and then npm start
+
+# Installing
+npm install to install dependencies and then npm start
 
 # Viz
 
