@@ -349,7 +349,7 @@ export const DASHES: Dash[] = [
         d3Vizzes: [
             {
                 id: 1,
-                name: 'D3BarChart',
+                name: 'D3ThreeCirclesComponent',
                 description: 'A bar chart in d3',
                 type: 'd3',
                 containerWidth: 'col-md-3',
@@ -357,8 +357,8 @@ export const DASHES: Dash[] = [
                 showDescription: true,
                 dashId: 1,
                 containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
+                component: d3Vizzes.D3ThreeCirclesComponent,
+                dataUrl: '',
                 graphWidth: 800,
                 graphHeight: 600,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }

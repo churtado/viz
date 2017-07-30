@@ -26,7 +26,7 @@ export class ThreeCirclesDashComponent implements OnInit {
     /**
      * Here we define where our vizzes will go
      */
-    @ViewChild('D3ThreeCirclesComponent', { read: ViewContainerRef }) barchartComponentContainer: ViewContainerRef;
+    @ViewChild('D3ThreeCirclesComponent', { read: ViewContainerRef }) threeCirclesComponentContainer: ViewContainerRef;
 
     private dash: Dash;
 
@@ -44,12 +44,12 @@ export class ThreeCirclesDashComponent implements OnInit {
         const containers = [
             {
                 name: 'D3ThreeCirclesComponent',
-                container: this.barchartComponentContainer
+                container: this.threeCirclesComponentContainer
             }
         ];
 
         // get the vizzes used for the dashboard
-        this.dashService.getDash(1).then((dash) => {
+        this.dashService.getDash(7).then((dash) => {
             this.dash = dash;
 
             this.dash.d3Vizzes.forEach((viz: D3Viz) => {
