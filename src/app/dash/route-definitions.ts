@@ -17,4 +17,9 @@ DASHES.forEach((dash) => {
     );
 });
 
+/**
+ * vega dashboards will work differently
+ * so we'll create a custom route
+ */
+
 export const dashRouting = RouterModule.forRoot(routes);

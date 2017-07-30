@@ -5,7 +5,6 @@ import { VizzesComponent } from './vizzes.component';
 import { DashesComponent } from './dashes.component';
 import * as Dash from './dash/index';
 import { VegaVizComponent } from './vega-viz.component';
-import { D3VizComponent } from './d3-viz.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
 
@@ -15,7 +14,6 @@ import { dashRouting } from './dash/route-definitions';
 const routes: Routes = [
   { path: '', redirectTo: '/dashes', pathMatch: 'full' },
   { path: 'vega/:id', component: VegaVizComponent },
-  { path: 'd3/:id', component: D3VizComponent },
   { path: 'vizzes', component: VizzesComponent },
   { path: 'dashes', component: DashesComponent },
   { path: 'about', component: AboutComponent },

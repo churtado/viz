@@ -7,7 +7,7 @@ import {
 import { DashService } from './../dash.service';
 
 import { Dash, D3Viz, Viz } from './../../viz';
-import { ALLVIZZES, D3VIZZES } from './../../mock-vizzes';
+import { ALLVIZZES } from './../../mock-vizzes';
 
 import {
     D3UpdatePatternComponent,
