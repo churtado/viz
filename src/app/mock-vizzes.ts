@@ -4,6 +4,9 @@ import {
     Viz,
     Dash
 } from './viz';
+
+import { VegaVizComponent } from './vega-viz.component';
+
 import * as d3Vizzes from './d3';
 import * as dashes from './dash';
 
@@ -128,105 +131,97 @@ export const DASHES: Dash[] = [
         id: 2,
         name: 'Grouped Bar',
         description: 'A grouped bar chart in vega',
-        url: 'grouped_bar',
-        component: dashes.BarchartDashComponent,
-        d3Vizzes: [
+        url: 'grouped-bar',
+        component: dashes.GroupedBarDashComponent,
+        d3Vizzes: [],
+        vegaVizzes: [
             {
-                id: 7,
-                name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
+                id: 1,
+                name: 'Grouped Bar',
+                description: 'A grouped bar chart in vega',
+                type: 'vega',
+                specUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/spec.vg.json',
+                tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json',
                 containerWidth: 'col-md-3',
                 showName: true,
                 showDescription: true,
-                dashId: 1,
-                containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
+                dashId: 2,
+                containerId: 'groupedBar',
+                component: d3Vizzes.D3BarChartComponent
+            }
+        ]
     },
     {
         id: 3,
         name: 'Nested Bar',
         description: 'A nested bar chart in vega',
         url: 'nested_bar',
-        component: dashes.BarchartDashComponent,
-        d3Vizzes: [
+        component: dashes.NestedBarDashComponent,
+        d3Vizzes: [ ],
+        vegaVizzes: [
             {
-                id: 7,
-                name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
+                id: 1,
+                name: 'Nested Bar',
+                description: 'A nested bar chart in vega',
+                type: 'vega',
+                specUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/spec.vg.json',
+                tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json',
                 containerWidth: 'col-md-3',
                 showName: true,
                 showDescription: true,
-                dashId: 1,
-                containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
+                dashId: 2,
+                containerId: 'groupedBar',
+                component: d3Vizzes.D3BarChartComponent
+            }
+        ]
     },
     {
         id: 4,
         name: 'Population Pyramid',
-        description: 'A population pyramid in vega',
+        description: 'A population pyramid chart in vega',
         url: 'population_pyramid',
-        component: dashes.BarchartDashComponent,
-        d3Vizzes: [
+        component: dashes.PopulationPyramidDashComponent,
+        d3Vizzes: [ ],
+        vegaVizzes: [
             {
-                id: 7,
-                name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
+                id: 1,
+                name: 'Population Pyramid',
+                description: 'A population pyramid in vega',
+                type: 'vega',
+                specUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/spec.vg.json',
+                tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json',
                 containerWidth: 'col-md-3',
                 showName: true,
                 showDescription: true,
-                dashId: 1,
-                containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
+                dashId: 2,
+                containerId: 'groupedBar',
+                component: d3Vizzes.D3BarChartComponent
+            }
+        ]
     },
     {
         id: 5,
         name: 'Stacked Bar',
-        description: 'A stacked bar chart in vega',
+        description: 'Astacked bar chart in vega',
         url: 'stacked_bar',
-        component: dashes.BarchartDashComponent,
-        d3Vizzes: [
+        component: dashes.StackedBarDashComponent,
+        d3Vizzes: [ ],
+        vegaVizzes: [
             {
-                id: 7,
-                name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
+                id: 1,
+                name: 'Population Pyramid',
+                description: 'A population pyramid in vega',
+                type: 'vega',
+                specUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/spec.vg.json',
+                tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json',
                 containerWidth: 'col-md-3',
                 showName: true,
                 showDescription: true,
-                dashId: 1,
-                containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
+                dashId: 2,
+                containerId: 'groupedBar',
+                component: d3Vizzes.D3BarChartComponent
+            }
+        ]
     },
     {
         id: 6,
@@ -335,28 +330,26 @@ export const DASHES: Dash[] = [
     {
         id: 10,
         name: 'Parallel Axis',
-        description: 'Parallel Axis in vega',
+        description: 'A parallel axis chart in vega',
         url: 'parallel_axis',
-        component: dashes.BarchartDashComponent,
-        d3Vizzes: [
+        component: dashes.ParallelAxisDashComponent,
+        d3Vizzes: [ ],
+        vegaVizzes: [
             {
-                id: 7,
-                name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
+                id: 1,
+                name: 'Population Pyramid',
+                description: 'A population pyramid in vega',
+                type: 'vega',
+                specUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/spec.vg.json',
+                tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json',
                 containerWidth: 'col-md-3',
                 showName: true,
                 showDescription: true,
-                dashId: 1,
-                containerId: '',
-                component: d3Vizzes.D3BarChartComponent,
-                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
+                dashId: 2,
+                containerId: 'groupedBar',
+                component: d3Vizzes.D3BarChartComponent
+            }
+        ]
     },
     {
         id: 11,

@@ -23,4 +23,14 @@ export class DashService {
             .then(dashes => dashes.find(dash => dash.id === id));
     }
 
+    getVegaSpec(viz: VegaViz) {
+        return this.http.get(viz.specUrl)
+            .map(res => res.json());
+    }
+
+    getVegaTooltipSpec(viz: VegaViz) {
+        return this.http.get(viz.tooltipSpecUrl)
+            .map(res => res.json());
+    }
+
 }
