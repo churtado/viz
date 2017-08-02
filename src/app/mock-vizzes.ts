@@ -1,104 +1,11 @@
 import {
     D3Viz,
     VegaViz,
-    Viz,
     Dash
 } from './viz';
 
-import { VegaVizComponent } from './vega-viz.component';
-
 import * as d3Vizzes from './d3';
 import * as dashes from './dash';
-
-
-export const VEGAVIZZES: VegaViz[] = [
-    {
-        id: 1,
-        name: 'Simple Bar Chart',
-        description: 'A simple bar chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/simple_bar/tooltip.json',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 7,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    },
-    {
-        id: 2,
-        name: 'Stacked Bar',
-        description: 'A stacked bar chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 8,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    },
-    {
-        id: 3,
-        name: 'Grouped Bar',
-        description: 'A grouped bar chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 9,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    },
-    {
-        id: 4,
-        name: 'Nested Bar',
-        description: 'A nested bar chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json',
-        containerWidth: 'col-md-2',
-        showName: true,
-        showDescription: true,
-        dashId: 10,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    },
-    {
-        id: 5,
-        name: 'Population Pyramid',
-        description: 'A population pyramid chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 11,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    },
-    {
-        id: 6,
-        name: 'Parallel Axis',
-        description: 'A parallel axis chart in vega',
-        type: 'vega',
-        specUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/spec.vg.json',
-        tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json',
-        containerWidth: 'col-md-3',
-        showName: true,
-        showDescription: true,
-        dashId: 12,
-        containerId: '',
-        component: d3Vizzes.D3BarChartComponent
-    }
-]
-
-export const ALLVIZZES: (VegaViz)[] = [...VEGAVIZZES];
 
 export const DASHES: Dash[] = [
     {
@@ -111,13 +18,6 @@ export const DASHES: Dash[] = [
             {
                 id: 7,
                 name: 'D3BarChart',
-                description: 'A bar chart in d3',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3BarChartComponent,
                 dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
                 graphWidth: 800,
@@ -138,14 +38,8 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'Grouped Bar',
-                description: 'A grouped bar chart in vega',
-                type: 'vega',
                 specUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/spec.vg.json',
                 tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/grouped_bar/tooltip.json',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 2,
                 containerId: 'groupedBar',
                 component: d3Vizzes.D3BarChartComponent
             }
@@ -162,14 +56,8 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'Nested Bar',
-                description: 'A nested bar chart in vega',
-                type: 'vega',
                 specUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/spec.vg.json',
                 tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/nested_bar/tooltip.json',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 2,
                 containerId: 'groupedBar',
                 component: d3Vizzes.D3BarChartComponent
             }
@@ -186,14 +74,8 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'Population Pyramid',
-                description: 'A population pyramid in vega',
-                type: 'vega',
                 specUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/spec.vg.json',
                 tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/population_pyramid/tooltip.json',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 2,
                 containerId: 'groupedBar',
                 component: d3Vizzes.D3BarChartComponent
             }
@@ -210,14 +92,8 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'Population Pyramid',
-                description: 'A population pyramid in vega',
-                type: 'vega',
                 specUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/spec.vg.json',
                 tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/stacked_bar/tooltip.json',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 2,
                 containerId: 'groupedBar',
                 component: d3Vizzes.D3BarChartComponent
             }
@@ -233,13 +109,6 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'D3MapComponent',
-                description: '',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3MapComponent,
                 dataUrl: '',
                 graphWidth: 800,
@@ -259,13 +128,6 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'D3ThreeCirclesComponent',
-                description: 'A bar chart in d3',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3ThreeCirclesComponent,
                 dataUrl: '',
                 graphWidth: 800,
@@ -283,15 +145,8 @@ export const DASHES: Dash[] = [
         component: dashes.TutorialDashComponent,
         d3Vizzes: [
             {
-                id: 7,
+                id: 1,
                 name: 'D3TutorialComponent',
-                description: 'A tutorial in d3',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3TutorialComponent,
                 dataUrl: '',
                 graphWidth: 800,
@@ -309,15 +164,8 @@ export const DASHES: Dash[] = [
         component: dashes.UpdatePatternDashComponent,
         d3Vizzes: [
             {
-                id: 7,
+                id: 1,
                 name: 'D3UpdatePatternComponent',
-                description: 'A bar chart in d3',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3UpdatePatternComponent,
                 dataUrl: '',
                 graphWidth: 800,
@@ -338,14 +186,8 @@ export const DASHES: Dash[] = [
             {
                 id: 1,
                 name: 'Population Pyramid',
-                description: 'A population pyramid in vega',
-                type: 'vega',
                 specUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/spec.vg.json',
                 tooltipSpecUrl: 'http://localhost:4200/assets/spec/vega/parallel_axis/tooltip.json',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 2,
                 containerId: 'groupedBar',
                 component: d3Vizzes.D3BarChartComponent
             }
@@ -361,13 +203,6 @@ export const DASHES: Dash[] = [
             {
                 id: 7,
                 name: 'D3SpiderChartComponent',
-                description: 'A bar chart in d3',
-                type: 'd3',
-                containerWidth: 'col-md-3',
-                showName: true,
-                showDescription: true,
-                dashId: 1,
-                containerId: '',
                 component: d3Vizzes.D3SpiderChartComponent,
                 dataUrl: '',
                 graphWidth: 800,

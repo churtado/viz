@@ -7,7 +7,6 @@ import {
 import { DashService } from './../dash.service';
 
 import { Dash, D3Viz, VegaViz, Viz } from './../../viz';
-import { ALLVIZZES } from './../../mock-vizzes';
 
 
 declare function require(name: string);
