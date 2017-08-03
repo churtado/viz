@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
-import { Viz } from './../../viz';
+import { D3Viz } from './../../viz';
 
 declare function require(name: string);
 const d3 = require('d3');
@@ -14,7 +14,7 @@ const d3 = require('d3');
 })
 export class D3MapComponent implements OnInit {
 
-    @Input() viz: Viz;
+    @Input() viz: D3Viz;
 
     constructor(
     ) { }
@@ -54,12 +54,17 @@ export class D3MapComponent implements OnInit {
             ]
         }
 
-        const width = 700,
-        height = 580;
+        let width = this.viz.graphWidth,
+        height = this.viz.graphHeight;
+
+        const margins = this.viz.margins;
 
         const svg = d3.select( 'svg' )
             .attr( 'width', width )
             .attr( 'height', height );
+
+        width = width - (margins.left + margins.right),
+            height = height - (margins.top + margins.bottom);
 
         const g = svg.append( 'g' );
 

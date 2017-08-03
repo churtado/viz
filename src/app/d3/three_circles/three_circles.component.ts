@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { VizService } from './../../viz.service';
-import { Viz } from './../../viz';
+import { D3Viz } from './../../viz';
 import {
     D3Service, D3,
     Selection, Axis,
@@ -19,7 +19,7 @@ const d3 = require('d3');
 })
 export class D3ThreeCirclesComponent implements OnInit {
 
-    @Input() viz: Viz;
+    @Input() viz: D3Viz;
 
     constructor(
     ) { }
@@ -30,30 +30,42 @@ export class D3ThreeCirclesComponent implements OnInit {
          * This is to understand what enter, update and exit do
          */
 
+        let width = this.viz.graphWidth,
+                height = this.viz.graphHeight;
+
+            const margins = this.viz.margins;
+
         const svg = d3.select('svg')
+
+        svg.attr('width', width);
+        svg.attr('height', height);
+
+        width = width - (margins.left + margins.right),
+        height = height - (margins.top + margins.bottom);
+
         let circle = svg.selectAll('circle')
             .data([32, 57, 112, 293]);
         circle.style('fill', 'steelblue');
 
         const circleEnter = circle.enter().append('circle');
         // circleEnter.style('fill', 'steelblue');
-        circleEnter.attr('cy', 60);
+        circleEnter.attr('cy', 6);
         circleEnter.attr('cx', (d, i) => i * 100 + 30);
         circleEnter.attr('r', (d) => Math.sqrt(d));
 
-        circle = svg.selectAll('circle')
-            .data([32, 57])
-            .exit().remove()
+        // circle = svg.selectAll('circle')
+        //     .data([32, 57])
+        //     .exit().remove()
 
-        circle = svg.selectAll('circle')
-            .data([32, 57, 293], (d) => d)
-            .enter().append('circle')
-            .style('fill', 'steelblue')
-            .attr('cy', 60)
-            .attr('cx', (d, i) => i * 100 + 30)
-            .attr('r', (d) => Math.sqrt(d));
+        // circle = svg.selectAll('circle')
+        //     .data([32, 57, 293], (d) => d)
+        //     .enter().append('circle')
+        //     .style('fill', 'steelblue')
+        //     .attr('cy', 60)
+        //     .attr('cx', (d, i) => i * 100 + 30)
+        //     .attr('r', (d) => Math.sqrt(d));
 
-        circle.exit().remove();
+        // circle.exit().remove();
     }
 
 }

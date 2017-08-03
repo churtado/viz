@@ -8,7 +8,6 @@ import { D3VizService } from './d3Viz.service';
 import {
     D3BarChartComponent,
     D3SpiderChartComponent,
-    D3TutorialComponent,
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
     D3MapComponent,
@@ -19,7 +18,6 @@ import {
     declarations: [
         D3BarChartComponent,
         D3SpiderChartComponent,
-        D3TutorialComponent,
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
         D3MapComponent,
@@ -27,7 +25,6 @@ import {
     exports: [
         D3BarChartComponent,
         D3SpiderChartComponent,
-        D3TutorialComponent,
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
         D3MapComponent,

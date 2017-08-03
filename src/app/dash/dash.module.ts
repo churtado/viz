@@ -13,19 +13,11 @@ import * as dashes from './index';
     ],
     declarations: [
         dashes.TestDashComponent,
-        dashes.MapDashComponent,
-        dashes.ThreeCirclesDashComponent,
-        dashes.TutorialDashComponent,
-        dashes.UpdatePatternDashComponent,
-        dashes.SpiderChartDashComponent,
+        dashes.Test2DashComponent,
     ],
     exports: [
         dashes.TestDashComponent,
-        dashes.MapDashComponent,
-        dashes.ThreeCirclesDashComponent,
-        dashes.TutorialDashComponent,
-        dashes.UpdatePatternDashComponent,
-        dashes.SpiderChartDashComponent,
+        dashes.Test2DashComponent,
     ],
     providers: [
         DashService,

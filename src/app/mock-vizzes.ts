@@ -10,7 +10,7 @@ import * as dashes from './dash';
 export const DASHES: Dash[] = [
     {
         id: 1,
-        name: 'Test Dashboard',
+        name: 'Test dashboard',
         description: 'Testing Vega and D3 components',
         url: 'test',
         component: dashes.TestDashComponent,
@@ -64,11 +64,11 @@ export const DASHES: Dash[] = [
         ]
     },
     {
-        id: 6,
-        name: 'Map',
-        description: 'A map in d3 using topojson',
-        url: 'map',
-        component: dashes.MapDashComponent,
+        id: 2,
+        name: 'Test dashboard 2',
+        description: 'Mostly d3 stuff',
+        url: 'test2',
+        component: dashes.Test2DashComponent,
         d3Vizzes: [
             {
                 id: 1,
@@ -79,84 +79,16 @@ export const DASHES: Dash[] = [
                 graphHeight: 600,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }
             },
-        ],
-        vegaVizzes: []
-    },
-    {
-        id: 7,
-        name: '3 circles',
-        description: '3 circles in d3',
-        url: 'three_circles',
-        component: dashes.ThreeCirclesDashComponent,
-        d3Vizzes: [
             {
-                id: 1,
-                name: 'D3ThreeCirclesComponent',
-                component: d3Vizzes.D3ThreeCirclesComponent,
-                dataUrl: '',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
-    },
-    {
-        id: 8,
-        name: 'Tutorial',
-        description: 'A tutorial in d3',
-        url: 'tutorial',
-        component: dashes.TutorialDashComponent,
-        d3Vizzes: [
-            {
-                id: 1,
-                name: 'D3TutorialComponent',
-                component: d3Vizzes.D3TutorialComponent,
-                dataUrl: '',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
-    },
-    {
-        id: 9,
-        name: 'Update Pattern',
-        description: 'How the update pattern works in d3',
-        url: 'update_pattern',
-        component: dashes.UpdatePatternDashComponent,
-        d3Vizzes: [
-            {
-                id: 1,
-                name: 'D3UpdatePatternComponent',
-                component: d3Vizzes.D3UpdatePatternComponent,
-                dataUrl: '',
-                graphWidth: 800,
-                graphHeight: 600,
-                margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
-        ],
-        vegaVizzes: []
-    },
-    {
-        id: 11,
-        name: 'Spider Chart',
-        description: 'A spider chart in d3',
-        url: 'spider_chart',
-        component: dashes.SpiderChartDashComponent,
-        d3Vizzes: [
-            {
-                id: 7,
+                id: 2,
                 name: 'D3SpiderChartComponent',
                 component: d3Vizzes.D3SpiderChartComponent,
                 dataUrl: '',
-                graphWidth: 800,
-                graphHeight: 600,
+                graphWidth: 350,
+                graphHeight: 400,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }
-            },
+            }
         ],
         vegaVizzes: []
     }
-
 ];
