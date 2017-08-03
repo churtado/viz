@@ -12,7 +12,7 @@ import * as dashes from './index';
         D3Module,
     ],
     declarations: [
-        dashes.BarchartDashComponent,
+        dashes.TestDashComponent,
         dashes.MapDashComponent,
         dashes.ThreeCirclesDashComponent,
         dashes.TutorialDashComponent,
@@ -20,7 +20,7 @@ import * as dashes from './index';
         dashes.SpiderChartDashComponent,
     ],
     exports: [
-        dashes.BarchartDashComponent,
+        dashes.TestDashComponent,
         dashes.MapDashComponent,
         dashes.ThreeCirclesDashComponent,
         dashes.TutorialDashComponent,

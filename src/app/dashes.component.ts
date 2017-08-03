@@ -16,7 +16,7 @@ import * as dashes from './dash/index';
   templateUrl: './dashes.component.html',
   styleUrls: ['./dashes.component.css'],
   entryComponents: [
-    dashes.BarchartDashComponent
+    dashes.TestDashComponent
   ]
 })
 

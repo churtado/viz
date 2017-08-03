@@ -13,7 +13,7 @@ export const DASHES: Dash[] = [
         name: 'Test Dashboard',
         description: 'Testing Vega and D3 components',
         url: 'test',
-        component: dashes.BarchartDashComponent,
+        component: dashes.TestDashComponent,
         d3Vizzes: [
             {
                 id: 1,

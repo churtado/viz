@@ -1,4 +1,4 @@
-export * from './bar-chart/barchart-dash.component';
+export * from './test-dash/test-dash.component';
 export * from './map/map-dash.component';
 export * from './three-circles/three-circles-dash.component'
 export * from './tutorial/tutorial-dash.component';

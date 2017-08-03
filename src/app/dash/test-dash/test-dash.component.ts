@@ -18,13 +18,13 @@ const vegaTooltip = require('vega-tooltip');
 
 @Component({
     selector: 'app-dash',
-    templateUrl: './barchart-dash.component.html',
-    styleUrls: ['./barchart-dash.component.css'],
+    templateUrl: './test-dash.component.html',
+    styleUrls: ['./test-dash.component.css'],
     entryComponents: [
         D3BarChartComponent,
     ]
 })
-export class BarchartDashComponent implements OnInit, OnDestroy {
+export class TestDashComponent implements OnInit, OnDestroy {
 
     /**
      * Here we define where our vizzes will go
