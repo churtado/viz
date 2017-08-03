@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.3.3/vega-tooltip.min.css">
 <style>
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 
@@ -29,9 +30,14 @@
         }
     }
 </style>
-
+<div id="viz-tooltip" class="vg-tooltip"></div>
 <div class="container-fluid">
     <div class="row content">
-        <div #D3BarChartComponent class="col-sm-9"></div>
+        <div #D3BarChartComponent class="col-sm-6"></div>
+        <div id="groupedBar" class="col-sm-6"></div>
+        <div id="nestedBar" class="col-sm-9"></div>
+        <div id="populationPyramid" class="col-sm-9"></div>
+        <div id="stackedBar" class="col-sm-9"></div>
+        <div id="parallelAxis" class="col-sm-9"></div>
     </div>
 </div>

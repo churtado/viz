@@ -59,7 +59,7 @@ export class UpdatePatternDashComponent implements OnInit {
     }
 
     private insertViz(
-        viz: Viz,
+        viz: D3Viz,
         containers: { name: string, container: ViewContainerRef }[]) {
         const ref = this.viewContainerRef.createComponent(
             this.componentFactoryResolver.resolveComponentFactory(viz.component));

@@ -4,7 +4,6 @@ import { Type } from '@angular/core';
 export class Viz {
   id: number;
   name: string;
-  component: Type<any>;
 }
 
 export class VegaViz extends Viz {
@@ -14,6 +13,7 @@ export class VegaViz extends Viz {
 }
 
 export class D3Viz extends Viz {
+  component: Type<any>;
   dataUrl: string;
   graphWidth: number;
   graphHeight: number;

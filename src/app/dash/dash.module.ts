@@ -18,11 +18,6 @@ import * as dashes from './index';
         dashes.TutorialDashComponent,
         dashes.UpdatePatternDashComponent,
         dashes.SpiderChartDashComponent,
-        dashes.GroupedBarDashComponent,
-        dashes.NestedBarDashComponent,
-        dashes.PopulationPyramidDashComponent,
-        dashes.StackedBarDashComponent,
-        dashes.ParallelAxisDashComponent,
     ],
     exports: [
         dashes.BarchartDashComponent,
@@ -31,11 +26,6 @@ import * as dashes from './index';
         dashes.TutorialDashComponent,
         dashes.UpdatePatternDashComponent,
         dashes.SpiderChartDashComponent,
-        dashes.GroupedBarDashComponent,
-        dashes.NestedBarDashComponent,
-        dashes.PopulationPyramidDashComponent,
-        dashes.StackedBarDashComponent,
-        dashes.ParallelAxisDashComponent,
     ],
     providers: [
         DashService,
