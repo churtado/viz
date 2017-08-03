@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { D3Module } from './../d3/d3.module';
 
@@ -7,6 +8,7 @@ import * as dashes from './index';
 
 @NgModule({
     imports: [
+        CommonModule,
         D3Module,
     ],
     declarations: [

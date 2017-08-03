@@ -18,7 +18,7 @@ const vegaTooltip = require('vega-tooltip');
     templateUrl: './grouped-bar-dash.component.html',
     styleUrls: ['./grouped-bar-dash.component.css'],
 })
-export class GroupedBarDashComponent implements OnInit {
+export class GroupedBarDashComponent implements OnInit, OnDestroy {
 
     private dash: Dash;
 
@@ -26,6 +26,7 @@ export class GroupedBarDashComponent implements OnInit {
         private componentFactoryResolver: ComponentFactoryResolver,
         private viewContainerRef: ViewContainerRef,
         private dashService: DashService,
+        private elementRef: ElementRef
     ) { }
 
     ngOnInit(): void {
@@ -63,6 +64,10 @@ export class GroupedBarDashComponent implements OnInit {
                 });
 
         })
+    }
+
+    ngOnDestroy() {
+        document.getElementById('vis-tooltip').remove();
     }
 
 }

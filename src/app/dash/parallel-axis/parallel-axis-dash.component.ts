@@ -18,7 +18,7 @@ const vegaTooltip = require('vega-tooltip');
     templateUrl: './parallel-axis-dash.component.html',
     styleUrls: ['./parallel-axis-dash.component.css'],
 })
-export class ParallelAxisDashComponent implements OnInit {
+export class ParallelAxisDashComponent implements OnInit, OnDestroy {
 
     private dash: Dash;
 
@@ -63,6 +63,10 @@ export class ParallelAxisDashComponent implements OnInit {
                 });
 
         })
+    }
+
+    ngOnDestroy() {
+        document.getElementById('vis-tooltip').remove();
     }
 
 }

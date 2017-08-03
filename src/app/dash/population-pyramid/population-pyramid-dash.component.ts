@@ -18,7 +18,7 @@ const vegaTooltip = require('vega-tooltip');
     templateUrl: './population-pyramid-dash.component.html',
     styleUrls: ['./population-pyramid-dash.component.css'],
 })
-export class PopulationPyramidDashComponent implements OnInit {
+export class PopulationPyramidDashComponent implements OnInit, OnDestroy {
 
     private dash: Dash;
 
@@ -63,6 +63,10 @@ export class PopulationPyramidDashComponent implements OnInit {
                 });
 
         })
+    }
+
+    ngOnDestroy() {
+        document.getElementById('vis-tooltip').remove();
     }
 
 }

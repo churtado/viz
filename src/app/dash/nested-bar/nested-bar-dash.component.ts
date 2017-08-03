@@ -18,7 +18,7 @@ const vegaTooltip = require('vega-tooltip');
     templateUrl: './nested-bar-dash.component.html',
     styleUrls: ['./nested-bar-dash.component.css'],
 })
-export class NestedBarDashComponent implements OnInit {
+export class NestedBarDashComponent implements OnInit, OnDestroy {
 
     private dash: Dash;
 
@@ -63,6 +63,10 @@ export class NestedBarDashComponent implements OnInit {
                 });
 
         })
+    }
+
+    ngOnDestroy() {
+        document.getElementById('vis-tooltip').remove();
     }
 
 }
