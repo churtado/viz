@@ -67,7 +67,10 @@ export class GroupedBarDashComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        document.getElementById('vis-tooltip').remove();
+        const tt = document.getElementById('vis-tooltip');
+        if (tt) {
+            document.getElementById('vis-tooltip').remove();
+        }
     }
 
 }
