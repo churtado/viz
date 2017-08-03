@@ -32,12 +32,26 @@
 </style>
 <div id="viz-tooltip" class="vg-tooltip"></div>
 <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <div #D3BarChartComponent></div>
+        </div>
+        <div class="col-sm-4">
+            <div id="groupedBar"></div>
+        </div>
+        <div id="nestedBar" class="col-sm-4">
+            <div id="nestedBar"></div>
+        </div>
+    </div>
     <div class="row content">
-        <div #D3BarChartComponent class="col-sm-6"></div>
-        <div id="groupedBar" class="col-sm-6"></div>
-        <div id="nestedBar" class="col-sm-9"></div>
-        <div id="populationPyramid" class="col-sm-9"></div>
-        <div id="stackedBar" class="col-sm-9"></div>
-        <div id="parallelAxis" class="col-sm-9"></div>
+        <div class="col-sm-4">
+            <div id="populationPyramid"></div>
+        </div>
+        <div class="col-sm-4">
+            <div id="stackedBar"></div>
+        </div>
+        <div class="col-sm-4">
+            <div id="parallelAxis"></div>
+        </div>
     </div>
 </div>

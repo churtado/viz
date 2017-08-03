@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v3.0.json",
   "height": 400,
-  "width": 400,
+  "width": 180,
   "padding": 5,
 
   "signals": [
-    { "name": "chartWidth", "value": 300 },
+    { "name": "chartWidth", "value": 180 },
     { "name": "chartPad", "value": 20 },
     { "name": "width", "update": "2 * chartWidth + chartPad" },
     { "name": "year", "value": 2000,
