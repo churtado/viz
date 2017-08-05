@@ -87,6 +87,15 @@ export const DASHES: Dash[] = [
                 graphWidth: 350,
                 graphHeight: 400,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }
+            },
+            {
+                id: 3,
+                name: 'D3UpdatePatternComponent',
+                component: d3Vizzes.D3UpdatePatternComponent,
+                dataUrl: '',
+                graphWidth: 800,
+                graphHeight: 200,
+                margins: { top: 20, right: 20, bottom: 30, left: 40 }
             }
         ],
         vegaVizzes: []

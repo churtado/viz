@@ -35,6 +35,7 @@ export class Test2DashComponent implements OnInit {
      */
     @ViewChild('D3MapComponent', { read: ViewContainerRef }) mapComponentContainer: ViewContainerRef;
     @ViewChild('D3SpiderChartComponent', { read: ViewContainerRef }) spiderChartComponentContainer: ViewContainerRef;
+    @ViewChild('D3UpdatePatternComponent', { read: ViewContainerRef }) updatePatternComponentContainer: ViewContainerRef;
 
     private dash: Dash;
 
@@ -63,6 +64,10 @@ export class Test2DashComponent implements OnInit {
             {
                 name: 'D3SpiderChartComponent',
                 container: this.spiderChartComponentContainer
+            },
+            {
+                name: 'D3UpdatePatternComponent',
+                container: this.updatePatternComponentContainer
             }
         ];
 
