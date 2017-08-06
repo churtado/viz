@@ -94,7 +94,6 @@ export class D3UpdatePatternComponent implements OnInit {
                     .attr('x', (d, i) => i * 32)
                     .style('fill-opacity', 1e-6)
                     .text((d: any) => {
-                        console.log('hi')
                         return d;
                     })
                     .transition(t)

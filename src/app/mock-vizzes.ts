@@ -99,5 +99,24 @@ export const DASHES: Dash[] = [
             }
         ],
         vegaVizzes: []
+    },
+    {
+        id: 3,
+        name: 'Mapping',
+        description: 'Studying how to do mapping in d3',
+        url: 'mapping',
+        component: dashes.MappingDashComponent,
+        d3Vizzes: [
+            {
+                id: 1,
+                name: 'D3MapComponent',
+                component: d3Vizzes.D3MapComponent,
+                dataUrl: 'http://localhost:4200/assets/spec/d3/map/map-data.json',
+                graphWidth: 800,
+                graphHeight: 600,
+                margins: { top: 20, right: 20, bottom: 30, left: 40 }
+            }
+        ],
+        vegaVizzes: []
     }
 ];

@@ -14,10 +14,12 @@ import * as dashes from './index';
     declarations: [
         dashes.TestDashComponent,
         dashes.Test2DashComponent,
+        dashes.MappingDashComponent,
     ],
     exports: [
         dashes.TestDashComponent,
         dashes.Test2DashComponent,
+        dashes.MappingDashComponent,
     ],
     providers: [
         DashService,

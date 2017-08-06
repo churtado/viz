@@ -16,4 +16,11 @@ export class D3VizService {
         return this.http.get(url);
     }
 
+    getD3Json(url: string) {
+        return this.http.get(url)
+            .map((res) => {
+                return res.json();
+            });
+    }
+
 }
