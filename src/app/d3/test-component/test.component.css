@@ -1,3 +1,7 @@
+text {
+    font: 12px monospace;
+}
+
 .bar {
   fill: steelblue;
 }

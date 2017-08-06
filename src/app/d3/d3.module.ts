@@ -11,6 +11,7 @@ import {
     D3ThreeCirclesComponent,
     D3UpdatePatternComponent,
     D3MapComponent,
+    D3TestComponent,
 } from './index';
 
 @NgModule({
@@ -21,6 +22,7 @@ import {
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
         D3MapComponent,
+        D3TestComponent,
     ],
     exports: [
         D3BarChartComponent,
@@ -28,6 +30,7 @@ import {
         D3ThreeCirclesComponent,
         D3UpdatePatternComponent,
         D3MapComponent,
+        D3TestComponent,
     ],
     providers: [
         HttpModule,

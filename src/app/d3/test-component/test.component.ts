@@ -11,8 +11,8 @@ import { D3VizService } from './../d3Viz.service';
 @Component({
     moduleId: module.id,
     selector: 'app-d3bar-chart',
-    templateUrl: './bar-chart.component.html',
-    styleUrls: [ './bar-chart.component.css' ],
+    templateUrl: './test.component.html',
+    styleUrls: [ './test.component.css' ],
     encapsulation: ViewEncapsulation.None
 })
 export class D3TestComponent implements OnInit, OnDestroy {

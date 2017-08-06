@@ -4,12 +4,15 @@ text {
 
 .enter {
   fill: green;
+  font: bold 48px monospace;
 }
 
 .update {
   fill: #333;
+  font: bold 48px monospace;
 }
 
 .exit {
   fill: brown;
+  font: bold 48px monospace;
 }

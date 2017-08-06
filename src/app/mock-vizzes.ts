@@ -74,9 +74,9 @@ export const DASHES: Dash[] = [
                 id: 1,
                 name: 'D3MapComponent',
                 component: d3Vizzes.D3MapComponent,
-                dataUrl: '',
-                graphWidth: 800,
-                graphHeight: 600,
+                dataUrl: 'http://localhost:4200/assets/spec/d3/map/map-data.json',
+                graphWidth: 600,
+                graphHeight: 400,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }
             },
             {
@@ -93,6 +93,15 @@ export const DASHES: Dash[] = [
                 name: 'D3UpdatePatternComponent',
                 component: d3Vizzes.D3UpdatePatternComponent,
                 dataUrl: '',
+                graphWidth: 800,
+                graphHeight: 200,
+                margins: { top: 20, right: 20, bottom: 30, left: 40 }
+            },
+            {
+                id: 4,
+                name: 'D3TestComponent',
+                component: d3Vizzes.D3TestComponent,
+                dataUrl: 'http://localhost:4200/assets/spec/d3/simple_bar/data.tsv',
                 graphWidth: 800,
                 graphHeight: 200,
                 margins: { top: 20, right: 20, bottom: 30, left: 40 }

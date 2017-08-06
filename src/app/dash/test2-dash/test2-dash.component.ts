@@ -12,6 +12,7 @@ import {
     D3MapComponent,
     D3SpiderChartComponent,
     D3UpdatePatternComponent,
+    D3TestComponent,
 } from './../../d3';
 
 declare function require(name: string);
@@ -26,6 +27,7 @@ const vegaTooltip = require('vega-tooltip');
         D3MapComponent,
         D3SpiderChartComponent,
         D3UpdatePatternComponent,
+        D3TestComponent,
     ]
 })
 export class Test2DashComponent implements OnInit {
@@ -36,6 +38,7 @@ export class Test2DashComponent implements OnInit {
     @ViewChild('D3MapComponent', { read: ViewContainerRef }) mapComponentContainer: ViewContainerRef;
     @ViewChild('D3SpiderChartComponent', { read: ViewContainerRef }) spiderChartComponentContainer: ViewContainerRef;
     @ViewChild('D3UpdatePatternComponent', { read: ViewContainerRef }) updatePatternComponentContainer: ViewContainerRef;
+    @ViewChild('D3TestComponent', { read: ViewContainerRef }) testComponentContainer: ViewContainerRef;
 
     private dash: Dash;
 
@@ -68,6 +71,10 @@ export class Test2DashComponent implements OnInit {
             {
                 name: 'D3UpdatePatternComponent',
                 container: this.updatePatternComponentContainer
+            },
+            {
+                name: 'D3TestComponent',
+                container: this.testComponentContainer
             }
         ];
 
