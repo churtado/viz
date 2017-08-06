@@ -11,10 +11,6 @@ import {
 
 import { D3VizService } from './../d3Viz.service';
 
-
-// declare function require(name: string);
-// const d3 = require('d3');
-
 @Component({
     moduleId: module.id,
     selector: 'app-d3map-chart',

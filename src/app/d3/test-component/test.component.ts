@@ -44,7 +44,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
         if (this.parentNativeElement !== null) {
 
-            let width = this.viz.graphWidth,
+            const width = this.viz.graphWidth,
                 height = this.viz.graphHeight;
 
             const margins = this.viz.margins;
@@ -54,48 +54,6 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
             this.d3Svg.attr('width', width);
             this.d3Svg.attr('height', height);
-
-            width = width - (margins.left + margins.right),
-                height = height - (margins.top + margins.bottom);
-
-            const x: ScaleBand<string> = d3.scaleBand().rangeRound([0, width]).padding(0.1);
-            const y: ScaleLinear<number, number> = d3.scaleLinear().rangeRound([height, 0]);
-
-            const d3G: Selection<SVGGElement, any, null, undefined> =
-                d3Svg.append<SVGGElement>('g').attr('transform', `translate(${margins.left}, ${margins.top})`);
-
-            this.d3VizService.getD3Data(this.viz.dataUrl).subscribe((response) => {
-
-                const data = d3.tsvParseRows(response['_body']);
-                data.shift();
-
-                x.domain(data.map((d) => d[0]));
-                y.domain([0, d3.max(data, (d) => +d[1])]);
-
-                d3G.append('g')
-                    .attr('class', 'axis axis--x')
-                    .attr('transform', `translate(0, ${height})`)
-                    .call(d3.axisBottom(x));
-
-                d3G.append('g')
-                    .attr('class', 'axis axis--y')
-                    .call(d3.axisLeft(y).ticks(10, '%'))
-                    .append('text')
-                    .attr('transform', 'rotate(-90)')
-                    .attr('y', 6)
-                    .attr('dy', '0.71em')
-                    .attr('text-anchor', 'end')
-                    .text('Frequency');
-
-                d3G.selectAll('.bar')
-                    .data(data)
-                    .enter().append('rect')
-                    .attr('class', 'bar')
-                    .attr('x', function (d) { return x(d[0]); })
-                    .attr('y', function (d) { return y(+d[1]); })
-                    .attr('width', x.bandwidth())
-                    .attr('height', function (d) { return height - y(+d[1]); });
-            });
 
         }
 
