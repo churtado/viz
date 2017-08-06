@@ -12,7 +12,7 @@ import { D3VizService } from './../d3Viz.service';
     moduleId: module.id,
     selector: 'app-d3bar-chart',
     templateUrl: './test.component.html',
-    styleUrls: [ './test.component.css' ],
+    styleUrls: ['./test.component.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class D3TestComponent implements OnInit, OnDestroy {
@@ -54,6 +54,17 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
             this.d3Svg.attr('width', width);
             this.d3Svg.attr('height', height);
+
+            const color: any = d3.scaleOrdinal(d3.schemeCategory20);
+
+            // layout
+            const pie = d3.pie()
+                .value((d: any) => d.apples)
+                .sort(null);
+
+            d3Svg.append('g')
+                .attr('transform', `translate ${width / 2}, ${height / 2})`);
+                
 
         }
 
